@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminales Personalizadas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Libre+Baskerville&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/Css/Styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="/Index.html">Volver a la pagina principal</a>
+        </nav>
+    </header>
+    <div class="container-gn">
+        <section class="proyecto visible">
+            <div class="container">
+                <div class="project-header">
+                    <div>
+                        <div class="project-status status-terminado">
+                            <i class="fa-solid fa-check"></i> Terminado
+                        </div>
+                        <h2>Terminales Personalizadas para PowerShell y CMD</h2>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/spogoo/terminales-personalizadas" target="_blank"
+                            class="btn btn-primary">
+                            <i class="fa-brands fa-github"></i> Repositorio
+                        </a>
+                        <button id="hurry-btn" class="btn btn-hurry">
+                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán para que lo mejore!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Descripción del Proyecto</h3>
+                    <p>Este proyecto consiste en una personalización profunda de las terminales de
+                        <strong>PowerShell</strong> y <strong>CMD</strong>, integrando estilo visual, detección
+                        inteligente del entorno y una marca personal con arte ASCII y frases adaptables.
+                    </p>
+                    <p>Los scripts cuentan con detección automática de entornos como Visual Studio para evitar
+                        ejecuciones no deseadas, además de mostrar la hora actual, tu apodo personalizado y un simpático
+                        gato como firma visual. Todo esto se combina con un entorno amigable, práctico y estético para
+                        el día a día.</p>
+                    <quote>“Se ve clean. -German</quote>
+                </div>
+
+                <div class="project-section">
+                    <h3>Galería del Proyecto</h3>
+                    <div class="project-gallery">
+                        <div class="gallery-item"><img src="imgs/consolas.png" alt="ambas terminales personalizadas">
+                        </div>
+                        <div class="gallery-item"><img src="imgs/cmd-cap.png" alt="terminal - CMD"></div>
+                        <div class="gallery-item"><img src="imgs/PowerShell-cap.png" alt="terminal - poershell"></div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Tecnologías Utilizadas</h3>
+                    <ul class="tools-list">
+                        <li><span class="tool-icon"><i class="fa-solid fa-terminal"></i></span> PowerShell Scripting
+                            (`.ps1`)</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-terminal"></i></span> CMD Scripting clásico
+                            (`.cmd`)</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-brain"></i></span> Detección de entorno
+                            (Visual Studio)</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-clock"></i></span> Impresión dinámica de hora
+                        </li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-cat"></i></span> Arte ASCII personalizado</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3>Próximos Pasos</h3>
+                    <ul class="next-steps-list">
+                        <li>Agregar alias útiles a PowerShell para tareas frecuentes</li>
+                        <li>Incluir animaciones básicas con efecto de máquina de escribir</li>
+                        <li>Versionar las configuraciones por estilo (oscuro, retro, clásico)</li>
+                        <li>Crear un script de instalación automática en sistemas Windows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox">
+        <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Imagen ampliada">
+        </div>
+        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <a href="#" id="to-top" class="visible">
+        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    </a>
+    <script type="module" src="/Assets/Js/Projects.js"></script>
+</body>
+
+</html>
