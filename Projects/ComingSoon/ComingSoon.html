@@ -1,17 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <link rel="stylesheet" href="../Assets/Css/Styles.css">
+    <title>Coming Soon – Ideas en Espera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/Css/Styles.css">
 </head>
 
 <body>
-    <!--listado de mis ideas de proyectos actuales con una descripcion de cada uno y que herramientas tengo planteadas usar en cada uno, em tarjetas simples, con el siguiente orden de contenido:
-    imagen del proyecto, nombre del proyecto, descripcion corta, herramientas a usar, estado del proyecto: en concepto, en espera.
-    -->
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="/Index.html">Volver a la página principal</a>
+        </nav>
+    </header>
+
+    <div class="container-gn">
+        <section class="proyecto visible">
+            <div class="container">
+                <div class="project-header">
+                    <div>
+                        <div class="project-status status-espera">
+                            <i class="fa-solid fa-hourglass-half"></i> En espera creativa
+                        </div>
+                        <h2>Coming Soon – Lo que viene...</h2>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>📌 Sobre esta sección</h3>
+                    <p>Algunas ideas todavía están madurando o en pausa por razones estratégicas o personales. Esta
+                        sección sirve como <strong>registro público de mis futuros desarrollos</strong>, proyectos que
+                        están en el horno y que eventualmente verán la luz.</p>
+                    <p>Son más que ideas: son visiones en incubación.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3>🧠 Proyectos en espera</h3>
+                    <ul class="next-steps-list">
+                        <li><strong>ACTO-I</strong> – Simulador educativo de reactores nucleares tipo PWR.
+                            <em>(Documentado, diseño técnico listo. En pausa hasta nuevo ciclo libre)</em>
+                        </li>
+                        <li><strong>Aztel</strong> – Proyecto Industrial y Empresarial.
+                            <em>(Esperando condiciones de inversión y pruebas reales)</em>
+                        </li>
+                        <li><strong>Ecos de Sangre</strong> – Videojuego narrativo en 2D, ambientado en una ciudad
+                            ficticia inspirada en Birmingham y Memphis que estoy desarrollando en conjunto con mi
+                            compañera <a
+                                href="https://www.instagram.com/coco_rayado10?utm_source=ig_web_button_share_sheet&igsh=dWlzem9scWZvanNj">@Samara</a>.
+                            <em>(Guión inicial definido. Arte conceptual en proceso)</em>
+                        </li>
+                        <li>
+                            <strong>G#</strong> - Mi propio lenguaje de programacion, asi es con su propio compilador y
+                            librerias, muy ambicioso pero me gustaria ver la programacion en esa faceta tan interna.
+                        </li>
+                        <li><strong>[Redactando +1 idea]</strong> – Siempre hay algo más que aún no he revelado...
+                            <em>(¿Tal vez una red neuronal hecha a mano? ¿Un sistema solar digital?)</em>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3>🛸 ¿Por qué mostrar proyectos que no tienen un desarrollo solido todavia?</h3>
+                    <p>Es una declaración de intención. Mostrar lo que está por venir ayuda a abrir
+                        puertas, generar interés y demostrar que <strong>la creatividad no descansa</strong>. Cada
+                        proyecto aquí representa una parte de mi forma de pensar.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a href="#" id="to-top" class="visible">
+        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    </a>
+    <script type="module" src="/Assets/Js/Projects.js"></script>
 </body>
 
 </html>

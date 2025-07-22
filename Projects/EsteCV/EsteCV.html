@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Web - Germán Evangelista</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/Css/Styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="/Index.html">Volver a la página principal</a>
+        </nav>
+    </header>
+
+    <div class="container-gn">
+        <section class="proyecto visible">
+            <div class="container">
+                <div class="project-header">
+                    <div>
+                        <div class="project-status status-terminado">
+                            <i class="fa-solid fa-code-branch"></i> Desarrollo Vivo
+                        </div>
+                        <h2>CV Web – Portafolio de Germán Evangelista</h2>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/germann-ux/CV" target="_blank" class="btn btn-primary">
+                            <i class="fa-brands fa-github"></i> Repositorio
+                        </a>
+                        <button id="hurry-btn" class="btn btn-hurry">
+                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán!
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Descripción del Proyecto</h3>
+                    <p>Este sitio web es mi <strong>currículum interactivo</strong> y portafolio en línea. Está diseñado
+                        para mostrar quién soy, lo que sé hacer, cómo pienso y qué me apasiona tanto dentro como fuera
+                        del código.</p>
+                    <p>Construido desde cero sin frameworks, tiene un enfoque <strong>minimalista, profesional y
+                            personal</strong>, donde cada sección está cuidada para contar mi historia sin caer en
+                        clichés.</p>
+                    <quote>"la carta de presentacion"</quote>
+                </div>
+
+                <div class="project-section">
+                    <h3>Galería del Proyecto</h3>
+                    <div class="project-gallery">
+                        <div class="gallery-item"><img src="imgs/ConocimirntosCap.png"
+                                alt="Vista de algunos conocimientos"></div>
+                        <div class="gallery-item"><img src="imgs/OutsideCap.png" alt="Sección fuera del código">
+                        </div>
+                        <div class="gallery-item"><img src="imgs/ProyectosCap.png"
+                                alt="Carrusel de proyectos interactivo"></div>
+                        <div class="gallery-item"><img src="imgs/ContactCap.png"
+                                alt="Sección de contacto con íconos integrados"></div>
+                        <div class="gallery-item"><img src="imgs/InDevelope.png" alt="Captura del desarrollo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Tecnologías Utilizadas</h3>
+                    <ul class="tools-list">
+                        <li><span class="tool-icon"><i class="fa-brands fa-html5"></i></span> HTML5 semántico</li>
+                        <li><span class="tool-icon"><i class="fa-brands fa-css3-alt"></i></span> CSS3 responsivo y
+                            animaciones</li>
+                        <li><span class="tool-icon"><i class="fa-brands fa-js"></i></span> JavaScript modular (sin
+                            frameworks)</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-font"></i></span> Google Fonts (Inter y Libre
+                            Baskerville)</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-icons"></i></span> FontAwesome 6.4</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-sitemap"></i></span> Estructura optimizada
+                            tipo SPA sin recarga</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3>Próximos Pasos</h3>
+                    <ul class="next-steps-list">
+                        <li>Agregar versión en inglés del sitio</li>
+                        <li>Incluir modo claro con toggle automático</li>
+                        <li>Optimizar rendimiento para dispositivos móviles antiguos</li>
+                        <li>Publicar en dominio personalizado</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox">
+        <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Imagen ampliada">
+        </div>
+        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <a href="#" id="to-top" class="visible">
+        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    </a>
+    <script type="module" src="/Assets/Js/Projects.js"></script>
+</body>
+
+</html>
