@@ -71,7 +71,7 @@ const projects = [
         image: "Assets/Imgs/charp.webp",
         description: "Aprendiendo C# con Charp(ACC) Es un Entorno Multiplataforma para aprender c# de forma progresiva y interactiva, mi proyecto mas ambicioso en su momento originalmente pensado para participar en una competencia de prototipos(spoiler: no gane).",
         resumen: "Entorno multiplataforma para aprender C#",
-        url: "Projects/ACC/ACC.html"
+        url: "./Projects/ACC/ACC.html"
     },
     {
         id: 2,
@@ -79,7 +79,7 @@ const projects = [
         image: "Assets/Imgs/CasandraLogo.png",
         description: "Mi propio sistema de analisis criminal echo pensando en la seguridad y el apoyo que puedo dar yo a mi estado natal(Guanajuato, Mexico).",
         resumen: "Sistema de análisis criminal para Guanajuato.",
-        url: "Projects/Casandra/Casandra.html"
+        url: "./Projects/Casandra/Casandra.html"
     },
     {
         id: 3,
@@ -87,7 +87,7 @@ const projects = [
         image: "Assets/Imgs/CABAE-LOGO.png",
         description: "Mi proyecto mas ambicioso, mezclando 2 de mis pasiones, la programacion y la mecanica cuantica en este proyecto de cifrado cuantico, donde se explora el potencial de la computación cuántica para mejorar la seguridad de los sistemas de cifrado.",
         resumen: "Proyecto de cifrado cuantico explorando el potencial de la computación cuántica.",
-        url: "Projects/CABAE/CABAE.html"
+        url: "./Projects/CABAE/CABAE.html"
     },
     {
         id: 4,
@@ -95,7 +95,7 @@ const projects = [
         image: "Assets/Imgs/CV-img.png",
         description: "Explora el desarrollo de este mismo curriculum que estas viendo! Incluye un carrusel de proyectos, navegación suave y un diseño responsivo que se adapta a cualquier dispositivo.",
         resumen: "Mira como es que hice este curriculum que estas viendo!",
-        url: "Projects/EsteCV/EsteCV.html"
+        url: "./Projects/EsteCV/EsteCV.html"
     },
     {
         id: 5,
@@ -103,7 +103,7 @@ const projects = [
         image: "Assets/Imgs/Morao4K.png",
         description: "Mis proyectos aun en concepto, ideas que pueden o no llegar al desarrollo. Aquí podrás ver un poco de lo que me inspira y motiva.",
         resumen: "ideas y conceptos de proyectos futuros.",
-        url: "Projects/ComingSoon/ComingSoon.html"
+        url: "./Projects/ComingSoon/ComingSoon.html"
     },
     {
         id: 6,
@@ -111,7 +111,7 @@ const projects = [
         image: "Assets/Imgs/muchoFlou.png",
         description: "Un proyecto personal mio donde personalize mis terminales que suelo usar (CMD y PowerShell)",
         resumen: "Personalización de mis terminales que mas uso (CMD y PowerShell).",
-        url: "Projects/MisTerminales/MisTerminales.html"
+        url: "./Projects/MisTerminales/MisTerminales.html"
     }
 ];
 
