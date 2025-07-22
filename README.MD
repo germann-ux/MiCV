@@ -47,7 +47,7 @@ Crear un sitio web **minimalista, fluido y con identidad**, que transmita tanto 
 
 ## 📸 Vista previa
 
-> Puedes ver el sitio en funcionamiento [aquí](https://TU_USUARIO.github.io/TU_REPOSITORIO) *(actualiza con tu URL real)*.
+> Puedes ver el sitio en funcionamiento [aquí](https://usuario.github.io/repo)
 
 ---
 
