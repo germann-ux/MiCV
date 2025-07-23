@@ -22,16 +22,24 @@ Crear un sitio web **minimalista, fluido y con identidad**, que transmita tanto 
 
 ## 📂 Estructura del proyecto
 
-├── index.html # Página principal (Inicio)
-├── proyecto-CABAE.html # Detalle individual de cada proyecto
-├── proyecto-ACC.html
-├── ... (otros proyectos)
+```plaintext
+MICV/
 ├── Assets/
-│ ├── Css/
-│ │ └── Styles.css # Estilos generales del sitio
-│ └── Js/
-│ └── Index.js # Lógica de scroll, secciones visibles, etc.
-└── README.md # Este archivo
+│   ├── Css/
+│   ├── Fonts/
+│   ├── Imgs/
+│   └── Js/
+├── Projects/
+│   ├── ACC/
+│   ├── CABAE/
+│   ├── Casandra/
+│   ├── ComingSoon/
+│   ├── EsteCV/
+│   └── MisTerminales/
+├── Index.html
+├── LICENSE
+└── README.md
+
 
 ---
 
