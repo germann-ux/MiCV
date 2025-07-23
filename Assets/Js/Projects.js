@@ -67,7 +67,7 @@ document.getElementById('hurry-btn').addEventListener('click', function () {
     }
 
     if (hurryClicks === 100) {
-        this.textContent = "Germán ascendió. ✨";
+        this.textContent = "100 clics ✨";
         alert("💥 ¡Felicidades! Has desbloqueado el final secreto: Modo Confeti Infinito 🥳");
 
         // Confeti
