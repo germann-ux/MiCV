@@ -1369,11 +1369,11 @@ li:hover .badge {
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     h3 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     ul li {
@@ -1409,5 +1409,15 @@ li:hover .badge {
         bottom: 1rem;
         right: 1rem;
         padding: 0.5rem 0.8rem;
+    }
+
+    .btn-hurry {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .btn-secondary {
+        font-size: 0.7rem;
+        padding: 0.4rem, 0.8rem;
     }
 }

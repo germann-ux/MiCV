@@ -45,7 +45,7 @@ const easterEggs = {
     99: "Ya casi... Quizás si le das 1 clic más, te llevas una sorpresa."
 };
 
-let hurryClicks = 99;
+let hurryClicks = 0;
 
 document.getElementById('hurry-btn').addEventListener('click', function () {
     hurryClicks++;
