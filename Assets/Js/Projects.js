@@ -20,30 +20,6 @@ document.getElementById('to-top').addEventListener('click', function (e) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// const messages = [
-//     "¡German! ¡Necesitamos esto para ayer!",
-//     "German dice que está trabajando a toda velocidad...",
-//     "German ha prometido terminar pronto... otra vez.",
-//     "German pregunta si puedes esperar un poco más...",
-//     "‘Solo un commit más’, dijo Germán hace media hora.",
-//     "Está en una batalla épica contra un bug de 1 línea.",
-//     "Mientras esperas, puedes hacer un café... o dos.",
-//     "Dicen que si presionas este botón muchas veces, Germán se acelera."
-// ];
-
-// const easterEggs = {
-//     5: "¿¡5 clics ya!?",
-//     13: "¿13 clics? Parece que estás buscando bugs a propósito...",
-//     20: "10+10 = el número de clics que llevas....",
-//     27: "Quizás eres muy persistente... quizás.",
-//     34: "‘Don't forget...’ que Germán es humano también.",
-//     42: "La respuesta al sentido de la vida es... seguir presionando este botón.",
-//     66: "Tienes mucho tiempo libre ehh.",
-//     69: "69 clics, Nice.",
-//     72: "Cliquear este botón tanto te llena de determinación.",
-//     99: "Ya casi... Quizás si le das 1 clic más, te llevas una sorpresa."
-// };
-
 // --- Helpers i18n locales ---
 function currentLang() {
     return localStorage.getItem("lang")
@@ -72,9 +48,6 @@ document.addEventListener("langchange", (e) => {
     const lang = e.detail?.lang || currentLang();
     hurryMessages = i18nArray("hurry.messages", lang);
     hurryEggs = i18nObject("hurry.eggs", lang);
-
-    // Opcional: actualizar el label del botón si lo internacionalizas con data-i18n
-    // document.getElementById('hurry-btn')?.textContent = pack(lang)["hurry.btn.initial"] || document.getElementById('hurry-btn')?.textContent;
 });
 
 // --- Handler del botón ---
@@ -174,4 +147,18 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') navigateLightbox(-1);
     if (e.key === 'ArrowRight') navigateLightbox(1);
+});
+
+// ===== Re-traducir contenido dinámico cuando cambia el idioma =====
+document.addEventListener("langchange", () => {
+    // Re-traduce el summary grande
+    updateProjectSummary(projects[activeIndex]);
+
+    // Re-traduce cada card ya creada
+    document.querySelectorAll(".card").forEach(card => {
+        const idx = Number(card.dataset.index);
+        if (!Number.isNaN(idx) && projects[idx]) {
+            translateCard(card, projects[idx]);
+        }
+    });
 });

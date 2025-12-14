@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Web - Germán Evangelista</title>
+    <title data-i18n="cv.meta.title">CV Web - Germán Evangelista</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../../Assets/Css/Styles.css">
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" aria-label="Navegación principal" data-i18n-aria-label="cv.nav.aria">
         <nav class="nav-links">
-            <a href="../../index.html">Volver a la página principal</a>
+            <a href="../../index.html" data-i18n="cv.nav.back">Volver a la página principal</a>
         </nav>
+
+        <!-- Switch de idioma -->
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="container-gn">
@@ -22,88 +32,135 @@
                 <div class="project-header">
                     <div>
                         <div class="project-status status-terminado">
-                            <i class="fa-solid fa-code-branch"></i> Desarrollo Vivo
+                            <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+                            <span data-i18n="cv.status.live">Desarrollo Vivo</span>
                         </div>
-                        <h2>CV Web – Portafolio de Germán Evangelista</h2>
+                        <h2 data-i18n="cv.title">CV Web – Portafolio de Germán Evangelista</h2>
                     </div>
+
                     <div class="project-actions">
-                        <a href="https://github.com/germann-ux/MiCV" target="_blank" class="btn btn-primary">
-                            <i class="fa-brands fa-github"></i> Repositorio
+                        <a href="https://github.com/germann-ux/MiCV" target="_blank" class="btn btn-primary"
+                            data-i18n="cv.cta.repo">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> Repositorio
                         </a>
-                        <button id="hurry-btn" class="btn btn-hurry">
-                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán!
+
+                        <button id="hurry-btn" class="btn btn-hurry" data-i18n="hurry.btn.initial">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i> ¡Apurar a Germán!
                         </button>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Descripción del Proyecto</h3>
-                    <p>Este sitio web es mi <strong>currículum interactivo</strong> y portafolio en línea. Está diseñado
+                    <h3 data-i18n="cv.section.descTitle">Descripción del Proyecto</h3>
+                    <p data-i18n="cv.section.descP1">
+                        Este sitio web es mi <strong>currículum interactivo</strong> y portafolio en línea. Está
+                        diseñado
                         para mostrar quién soy, lo que sé hacer, cómo pienso y qué me apasiona tanto dentro como fuera
-                        del código.</p>
-                    <p>Construido desde cero sin frameworks, tiene un enfoque <strong>minimalista, profesional y
+                        del código.
+                    </p>
+                    <p data-i18n="cv.section.descP2">
+                        Construido desde cero sin frameworks, tiene un enfoque <strong>minimalista, profesional y
                             personal</strong>, donde cada sección está cuidada para contar mi historia sin caer en
-                        clichés.</p>
-                    <quote>"la carta de presentacion"</quote>
+                        clichés.
+                    </p>
+                    <quote data-i18n="cv.section.descQuote">"la carta de presentacion"</quote>
                 </div>
 
                 <div class="project-section">
-                    <h3>Galería del Proyecto</h3>
+                    <h3 data-i18n="cv.section.galleryTitle">Galería del Proyecto</h3>
                     <div class="project-gallery">
-                        <div class="gallery-item"><img src="imgs/ConocimirntosCap.png"
-                                alt="Vista de algunos conocimientos"></div>
-                        <div class="gallery-item"><img src="imgs/OutsideCap.png" alt="Sección fuera del código">
+                        <div class="gallery-item">
+                            <img src="imgs/ConocimirntosCap.png" alt="Vista de algunos conocimientos"
+                                data-i18n-title="cv.gallery.alt1">
                         </div>
-                        <div class="gallery-item"><img src="imgs/ProyectosCap.png"
-                                alt="Carrusel de proyectos interactivo"></div>
-                        <div class="gallery-item"><img src="imgs/ContactCap.png"
-                                alt="Sección de contacto con íconos integrados"></div>
-                        <div class="gallery-item"><img src="imgs/InDevelope.png" alt="Captura del desarrollo">
+                        <div class="gallery-item">
+                            <img src="imgs/OutsideCap.png" alt="Sección fuera del código"
+                                data-i18n-title="cv.gallery.alt2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/ProyectosCap.png" alt="Carrusel de proyectos interactivo"
+                                data-i18n-title="cv.gallery.alt3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/ContactCap.png" alt="Sección de contacto con íconos integrados"
+                                data-i18n-title="cv.gallery.alt4">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/InDevelope.png" alt="Captura del desarrollo"
+                                data-i18n-title="cv.gallery.alt5">
                         </div>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Tecnologías Utilizadas</h3>
+                    <h3 data-i18n="cv.section.techTitle">Tecnologías Utilizadas</h3>
                     <ul class="tools-list">
-                        <li><span class="tool-icon"><i class="fa-brands fa-html5"></i></span> HTML5 semántico</li>
-                        <li><span class="tool-icon"><i class="fa-brands fa-css3-alt"></i></span> CSS3 responsivo y
-                            animaciones</li>
-                        <li><span class="tool-icon"><i class="fa-brands fa-js"></i></span> JavaScript modular (sin
-                            frameworks)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-font"></i></span> Google Fonts (Inter y Libre
-                            Baskerville)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-icons"></i></span> FontAwesome 6.4</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-sitemap"></i></span> Estructura optimizada
-                            tipo SPA sin recarga</li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-brands fa-html5" aria-hidden="true"></i></span>
+                            <span data-i18n="cv.tech.item1">HTML5 semántico</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span>
+                            <span data-i18n="cv.tech.item2">CSS3 responsivo y animaciones</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-brands fa-js" aria-hidden="true"></i></span>
+                            <span data-i18n="cv.tech.item3">JavaScript modular (sin frameworks)</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-font" aria-hidden="true"></i></span>
+                            <span data-i18n="cv.tech.item4">Google Fonts (Inter y Libre Baskerville)</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-icons" aria-hidden="true"></i></span>
+                            <span data-i18n="cv.tech.item5">FontAwesome 6.4</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span>
+                            <span data-i18n="cv.tech.item6">Estructura optimizada tipo SPA sin recarga</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="project-section">
-                    <h3>Próximos Pasos</h3>
+                    <h3 data-i18n="cv.section.nextTitle">Próximos Pasos</h3>
                     <ul class="next-steps-list">
-                        <li>Agregar versión en inglés del sitio</li>
-                        <li>Incluir modo claro con toggle automático</li>
-                        <li>Optimizar rendimiento para dispositivos móviles antiguos</li>
-                        <li>Publicar en dominio personalizado</li>
+                        <li data-i18n="cv.next.item1">Agregar versión en inglés del sitio</li>
+                        <li data-i18n="cv.next.item2">Incluir modo claro con toggle automático</li>
+                        <li data-i18n="cv.next.item3">Optimizar rendimiento para dispositivos móviles antiguos</li>
+                        <li data-i18n="cv.next.item4">Publicar en dominio personalizado</li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-    <div class="lightbox">
-        <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
-        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes"
+        data-i18n-aria-label="cv.lightbox.aria">
+        <button class="lightbox-close" aria-label="Cerrar" data-i18n-aria-label="cv.lightbox.close">
+            <i class="fa-solid fa-times" aria-hidden="true"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Anterior" data-i18n-aria-label="cv.lightbox.prev">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
         <div class="lightbox-content">
-            <img src="" alt="Imagen ampliada">
+            <img src="" alt="Imagen ampliada" data-i18n-title="cv.lightbox.imgAlt">
         </div>
-        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="lightbox-nav lightbox-next" aria-label="Siguiente" data-i18n-aria-label="cv.lightbox.next">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
     </div>
 
-    <a href="#" id="to-top" class="visible">
-        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    <a href="#" id="to-top" class="visible" aria-label="Volver arriba" data-i18n-aria-label="cv.toTop.aria">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span data-i18n="cv.toTop">Volver arriba</span>
     </a>
+
+    <!-- i18n primero -->
+    <script type="module" src="../../Assets/Js/lang.js"></script>
+    <script type="module" src="../../Assets/Js/langSwich.js"></script>
+
+    <!-- Lógica de esta página -->
     <script type="module" src="../../Assets/Js/Projects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

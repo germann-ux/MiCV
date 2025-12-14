@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casandra - IA de Análisis Criminal</title>
+
+    <!-- title será sobreescrito por applyLang; este queda como fallback -->
+    <title data-i18n="casandra.meta.title">Casandra - IA de Análisis Criminal</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../../Assets/Css/Styles.css">
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" aria-label="Navegación principal" data-i18n-aria-label="casandra.nav.aria">
         <nav class="nav-links">
-            <a href="../../index.html">Volver a la página principal</a>
+            <a href="../../index.html" data-i18n="casandra.nav.back">Volver a la página principal</a>
         </nav>
+
+        <!-- Switch de idioma -->
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="container-gn">
@@ -22,96 +35,160 @@
                 <div class="project-header">
                     <div>
                         <div class="project-status status-desarrollo">
-                            <i class="fa-solid fa-code-branch"></i> En desarrollo
+                            <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+                            <span data-i18n="casandra.status.dev">En desarrollo</span>
                         </div>
-                        <h2>Casandra: IA de Análisis Criminal</h2>
+                        <h2 data-i18n="casandra.title">Casandra: IA de Análisis Criminal</h2>
                     </div>
+
                     <div class="project-actions">
-                        <a href="https://github.com/germann-ux/Casandra" target="_blank" class="btn btn-primary">
-                            <i class="fa-brands fa-github"></i> Repositorio
+                        <a href="https://github.com/germann-ux/Casandra" target="_blank" class="btn btn-primary"
+                            data-i18n="casandra.cta.repo">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> Repositorio
                         </a>
-                        <a href="https://deepwiki.com/germann-ux/Casandra" target="_blank" class="btn btn-secondary">
-                            <i class="fa-solid fa-book"></i> Wiki técnica
+
+                        <a href="https://deepwiki.com/germann-ux/Casandra" target="_blank" class="btn btn-secondary"
+                            data-i18n="casandra.cta.wiki">
+                            <i class="fa-solid fa-book" aria-hidden="true"></i> Wiki técnica
                         </a>
-                        <button id="hurry-btn" class="btn btn-hurry">
-                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán!
+
+                        <button id="hurry-btn" class="btn btn-hurry" data-i18n="hurry.btn.initial">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i> ¡Apurar a Germán!
                         </button>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Descripción del Proyecto</h3>
-                    <p><strong>Casandra</strong> es una inteligencia artificial desarrollada para el análisis criminal a
+                    <h3 data-i18n="casandra.section.descTitle">Descripción del Proyecto</h3>
+
+                    <p data-i18n="casandra.section.descP1">
+                        <strong>Casandra</strong> es una inteligencia artificial desarrollada para el análisis criminal
+                        a
                         partir de datos reales del estado de Guanajuato. Su objetivo es detectar patrones delictivos,
                         generar visualizaciones comprensibles y redactar reportes ejecutivos de forma autónoma con ayuda
-                        de Gemini 2.5.</p>
-                    <p>Funciona bajo una arquitectura modular en Python, con visualizaciones automáticas y un motor
+                        de Gemini 2.5.
+                    </p>
+
+                    <p data-i18n="casandra.section.descP2">
+                        Funciona bajo una arquitectura modular en Python, con visualizaciones automáticas y un motor
                         textual inteligente, transformando datos crudos en conocimiento para la toma de decisiones
-                        estratégicas en seguridad pública.</p>
-                    <quote>“Casandra es el puente entre el dato y la acción, entre el crimen y su comprensión.”</quote>
+                        estratégicas en seguridad pública.
+                    </p>
+
+                    <quote data-i18n="casandra.section.descQuote">
+                        “Casandra es el puente entre el dato y la acción, entre el crimen y su comprensión.”
+                    </quote>
                 </div>
 
                 <div class="project-section">
-                    <h3>Galería del Proyecto</h3>
+                    <h3 data-i18n="casandra.section.galleryTitle">Galería del Proyecto</h3>
+
                     <div class="project-gallery">
-                        <div class="gallery-item"><img src="imgs/LandingCasandra.png"
-                                alt="Dashboard criminal interactivo"></div>
-                        <div class="gallery-item"><img src="imgs/PanelesCasandra.png" alt="HTML generado por Casandra">
+                        <div class="gallery-item">
+                            <img src="imgs/LandingCasandra.png" alt="Dashboard criminal interactivo"
+                                data-i18n-title="casandra.gallery.alt1">
                         </div>
-                        <div class="gallery-item"><img src="imgs/GraficaMes.png" alt="Gráficos ejecutivos generados">
+                        <div class="gallery-item">
+                            <img src="imgs/PanelesCasandra.png" alt="HTML generado por Casandra"
+                                data-i18n-title="casandra.gallery.alt2">
                         </div>
-                        <div class="gallery-item"><img src="imgs/mapaCalor.png" alt="mapa de calor de Casandra">
+                        <div class="gallery-item">
+                            <img src="imgs/GraficaMes.png" alt="Gráficos ejecutivos generados"
+                                data-i18n-title="casandra.gallery.alt3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/mapaCalor.png" alt="mapa de calor de Casandra"
+                                data-i18n-title="casandra.gallery.alt4">
                         </div>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Tecnologías Utilizadas</h3>
+                    <h3 data-i18n="casandra.section.techTitle">Tecnologías Utilizadas</h3>
+
                     <ul class="tools-list">
-                        <li><span class="tool-icon"><i class="fa-brands fa-python"></i></span> Python 3.11</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-database"></i></span> Pandas, Numpy,
-                            Scikit-learn</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-chart-line"></i></span> Matplotlib, Seaborn,
-                            Plotly</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-brain"></i></span> Gemini 2.5 Pro vía API REST
+                        <li>
+                            <span class="tool-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item1">Python 3.11</span>
                         </li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-code-branch"></i></span> Arquitectura modular
-                            desacoplada</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-terminal"></i></span> CLI interactiva con
-                            `main.py`</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-file-code"></i></span> Generación de HTML
-                            programática (`html_builder.py`)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-image"></i></span> Dashboards y
-                            visualizaciones exportables</li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item2">Pandas, Numpy, Scikit-learn</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item3">Matplotlib, Seaborn, Plotly</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item4">Gemini 2.5 Pro vía API REST</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item5">Arquitectura modular desacoplada</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item6">CLI interactiva con <code>main.py</code></span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-file-code" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item7">Generación de HTML programática
+                                (<code>html_builder.py</code>)</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-image" aria-hidden="true"></i></span>
+                            <span data-i18n="casandra.tech.item8">Dashboards y visualizaciones exportables</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="project-section">
-                    <h3>Próximos Pasos</h3>
+                    <h3 data-i18n="casandra.section.nextTitle">Próximos Pasos</h3>
+
                     <ul class="next-steps-list">
-                        <li>Implementar clustering geográfico para zonas calientes</li>
-                        <li>Asignar prioridades visuales por tipo y gravedad delictiva</li>
-                        <li>Integrar exportación PDF con visuales embebidos</li>
-                        <li>Ampliar la capacidad de narrativa con prompts dinámicos</li>
-                        <li>Desarrollar un dashboard navegable con filtros interactivos</li>
+                        <li data-i18n="casandra.next.item1">Implementar clustering geográfico para zonas calientes</li>
+                        <li data-i18n="casandra.next.item2">Asignar prioridades visuales por tipo y gravedad delictiva
+                        </li>
+                        <li data-i18n="casandra.next.item3">Integrar exportación PDF con visuales embebidos</li>
+                        <li data-i18n="casandra.next.item4">Ampliar la capacidad de narrativa con prompts dinámicos</li>
+                        <li data-i18n="casandra.next.item5">Desarrollar un dashboard navegable con filtros interactivos
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-    <div class="lightbox">
-        <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
-        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes"
+        data-i18n-aria-label="casandra.lightbox.aria">
+        <button class="lightbox-close" aria-label="Cerrar" data-i18n-aria-label="casandra.lightbox.close">
+            <i class="fa-solid fa-times" aria-hidden="true"></i>
+        </button>
+
+        <button class="lightbox-nav lightbox-prev" aria-label="Anterior" data-i18n-aria-label="casandra.lightbox.prev">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
         <div class="lightbox-content">
-            <img src="" alt="Imagen ampliada">
+            <img src="" alt="Imagen ampliada" data-i18n-title="casandra.lightbox.imgAlt">
         </div>
-        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <button class="lightbox-nav lightbox-next" aria-label="Siguiente" data-i18n-aria-label="casandra.lightbox.next">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
     </div>
 
-    <a href="#" id="to-top" class="visible">
-        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    <a href="#" id="to-top" class="visible" aria-label="Volver arriba" data-i18n-aria-label="casandra.toTop.aria">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span data-i18n="casandra.toTop">Volver arriba</span>
     </a>
+
+    <!-- i18n primero -->
+    <script type="module" src="../../Assets/Js/lang.js"></script>
+    <script type="module" src="../../Assets/Js/langSwich.js"></script>
+
+    <!-- Lógica de esta página -->
     <script type="module" src="../../Assets/Js/Projects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

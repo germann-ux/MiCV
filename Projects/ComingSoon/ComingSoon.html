@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon – Ideas en Espera</title>
+    <title data-i18n="coming.meta.title">Coming Soon – Ideas en Espera</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../../Assets/Css/Styles.css">
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" aria-label="Navegación principal" data-i18n-aria-label="coming.nav.aria">
         <nav class="nav-links">
-            <a href="../../index.html">Volver a la página principal</a>
+            <a href="../../index.html" data-i18n="coming.nav.back">Volver a la página principal</a>
         </nav>
+
+        <!-- Switch de idioma -->
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="container-gn">
@@ -22,58 +32,77 @@
                 <div class="project-header">
                     <div>
                         <div class="project-status status-espera">
-                            <i class="fa-solid fa-hourglass-half"></i> En espera creativa
+                            <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
+                            <span data-i18n="coming.status.waiting">En espera creativa</span>
                         </div>
-                        <h2>Coming Soon – Lo que viene...</h2>
+                        <h2 data-i18n="coming.title">Coming Soon – Lo que viene...</h2>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>📌 Sobre esta sección</h3>
-                    <p>Algunas ideas todavía están madurando o en pausa por razones estratégicas o personales. Esta
+                    <h3 data-i18n="coming.section.aboutTitle">📌 Sobre esta sección</h3>
+                    <p data-i18n="coming.section.aboutP1">
+                        Algunas ideas todavía están madurando o en pausa por razones estratégicas o personales. Esta
                         sección sirve como <strong>registro público de mis futuros desarrollos</strong>, proyectos que
-                        están en el horno y que eventualmente verán la luz.</p>
-                    <p>Son más que ideas: son visiones en incubación.</p>
+                        están en el horno y que eventualmente verán la luz.
+                    </p>
+                    <p data-i18n="coming.section.aboutP2">Son más que ideas: son visiones en incubación.</p>
                 </div>
 
                 <div class="project-section">
-                    <h3>🧠 Proyectos en espera</h3>
+                    <h3 data-i18n="coming.section.listTitle">🧠 Proyectos en espera</h3>
                     <ul class="next-steps-list">
-                        <li><strong>ACTO-I</strong> – Simulador educativo de reactores nucleares tipo PWR.
+                        <li data-i18n="coming.wait.item1">
+                            <strong>ACTO-I</strong> – Simulador educativo de reactores nucleares tipo PWR.
                             <em>(Documentado, diseño técnico listo. En pausa hasta nuevo ciclo libre)</em>
                         </li>
-                        <li><strong>Aztel</strong> – Proyecto Industrial y Empresarial.
+                        <li data-i18n="coming.wait.item2">
+                            <strong>Aztel</strong> – Proyecto Industrial y Empresarial.
                             <em>(Esperando condiciones de inversión y pruebas reales)</em>
                         </li>
-                        <li><strong>Ecos de Sangre</strong> – Videojuego narrativo en 2D, ambientado en una ciudad
+                        <li data-i18n="coming.wait.item3">
+                            <strong>Ecos de Sangre</strong> – Videojuego narrativo en 2D, ambientado en una ciudad
                             ficticia inspirada en Birmingham y Memphis que estoy desarrollando en conjunto con mi
-                            compañera <a
-                                href="https://www.instagram.com/coco_rayado10?utm_source=ig_web_button_share_sheet&igsh=dWlzem9scWZvanNj">@Samara</a>.
+                            compañera
+                            <a href="https://www.instagram.com/coco_rayado10?utm_source=ig_web_button_share_sheet&igsh=dWlzem9scWZvanNj"
+                                target="_blank" rel="noopener noreferrer"
+                                data-i18n="coming.wait.item3.link">@Samara</a>.
                             <em>(Guión inicial definido. Arte conceptual en proceso)</em>
                         </li>
-                        <li>
+                        <li data-i18n="coming.wait.item4">
                             <strong>G#</strong> - Mi propio lenguaje de programacion, asi es con su propio compilador y
                             librerias, muy ambicioso pero me gustaria ver la programacion en esa faceta tan interna.
                         </li>
-                        <li><strong>[Redactando +1 idea]</strong> – Siempre hay algo más que aún no he revelado...
+                        <li data-i18n="coming.wait.item5">
+                            <strong>[Redactando +1 idea]</strong> – Siempre hay algo más que aún no he revelado...
                             <em>(¿Tal vez una red neuronal hecha a mano? ¿Un sistema solar digital?)</em>
                         </li>
                     </ul>
                 </div>
 
                 <div class="project-section">
-                    <h3>🛸 ¿Por qué mostrar proyectos que no tienen un desarrollo solido todavia?</h3>
-                    <p>Es una declaración de intención. Mostrar lo que está por venir ayuda a abrir
+                    <h3 data-i18n="coming.section.whyTitle">🛸 ¿Por qué mostrar proyectos que no tienen un desarrollo
+                        solido todavia?</h3>
+                    <p data-i18n="coming.section.whyP1">
+                        Es una declaración de intención. Mostrar lo que está por venir ayuda a abrir
                         puertas, generar interés y demostrar que <strong>la creatividad no descansa</strong>. Cada
-                        proyecto aquí representa una parte de mi forma de pensar.</p>
+                        proyecto aquí representa una parte de mi forma de pensar.
+                    </p>
                 </div>
             </div>
         </section>
     </div>
 
-    <a href="#" id="to-top" class="visible">
-        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    <a href="#" id="to-top" class="visible" aria-label="Volver arriba" data-i18n-aria-label="coming.toTop.aria">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span data-i18n="coming.toTop">Volver arriba</span>
     </a>
+
+    <!-- i18n primero -->
+    <script type="module" src="../../Assets/Js/lang.js"></script>
+    <script type="module" src="../../Assets/Js/langSwich.js"></script>
+
+    <!-- Lógica de esta página -->
     <script type="module" src="../../Assets/Js/Projects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

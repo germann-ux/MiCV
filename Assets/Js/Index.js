@@ -63,57 +63,75 @@ function fadeInVisibleSections() {
     });
 }
 
-// Datos de proyectos (simulados)
+// Datos de proyectos (i18n-ready)
 const projects = [
     {
         id: 1,
-        title: "ACC",
+        titleKey: "proj.acc.title",
+        resumenKey: "proj.acc.summary",
+        descKey: "proj.acc.desc",
         image: "Assets/Imgs/charp.webp",
-        description: "Aprendiendo C# con Charp(ACC) Es un Entorno Multiplataforma para aprender c# de forma progresiva y interactiva, mi proyecto mas ambicioso en su momento originalmente pensado para participar en una competencia de prototipos(spoiler: no gane).",
-        resumen: "Entorno multiplataforma para aprender C#",
         url: "./Projects/ACC/ACC.html"
     },
     {
         id: 2,
-        title: "Casandra",
+        titleKey: "proj.casandra.title",
+        resumenKey: "proj.casandra.summary",
+        descKey: "proj.casandra.desc",
         image: "Assets/Imgs/CasandraLogo.png",
-        description: "Mi propio sistema de analisis criminal echo pensando en la seguridad y el apoyo que puedo dar yo a mi estado natal(Guanajuato, Mexico).",
-        resumen: "Sistema de análisis criminal para Guanajuato.",
         url: "./Projects/Casandra/Casandra.html"
     },
     {
         id: 3,
-        title: "CABAE",
+        titleKey: "proj.cabae.title",
+        resumenKey: "proj.cabae.summary",
+        descKey: "proj.cabae.desc",
         image: "Assets/Imgs/CABAE-LOGO.png",
-        description: "Mi proyecto mas ambicioso, mezclando 2 de mis pasiones, la programacion y la mecanica cuantica en este proyecto de cifrado cuantico, donde se explora el potencial de la computación cuántica para mejorar la seguridad de los sistemas de cifrado.",
-        resumen: "Proyecto de cifrado cuantico explorando el potencial de la computación cuántica.",
         url: "./Projects/CABAE/CABAE.html"
     },
     {
         id: 4,
-        title: "Este CV",
+        titleKey: "proj.cv.title",
+        resumenKey: "proj.cv.summary",
+        descKey: "proj.cv.desc",
         image: "Assets/Imgs/CV-img.png",
-        description: "Explora el desarrollo de este mismo curriculum que estas viendo! Incluye un carrusel de proyectos, navegación suave y un diseño responsivo que se adapta a cualquier dispositivo.",
-        resumen: "Mira como es que hice este curriculum que estas viendo!",
         url: "./Projects/EsteCV/EsteCV.html"
     },
     {
         id: 5,
-        title: "Coming soon",
+        titleKey: "proj.coming.title",
+        resumenKey: "proj.coming.summary",
+        descKey: "proj.coming.desc",
         image: "Assets/Imgs/Morao4K.png",
-        description: "Mis proyectos aun en concepto, ideas que pueden o no llegar al desarrollo. Aquí podrás ver un poco de lo que me inspira y motiva.",
-        resumen: "ideas y conceptos de proyectos futuros.",
         url: "./Projects/ComingSoon/ComingSoon.html"
     },
     {
         id: 6,
-        title: "Mis Terminales",
+        titleKey: "proj.term.title",
+        resumenKey: "proj.term.summary",
+        descKey: "proj.term.desc",
         image: "Assets/Imgs/muchoFlou.png",
-        description: "Un proyecto personal mio donde personalize mis terminales que suelo usar (CMD y PowerShell)",
-        resumen: "Personalización de mis terminales que mas uso (CMD y PowerShell).",
         url: "./Projects/MisTerminales/MisTerminales.html"
     }
 ];
+
+// ===== i18n helpers para contenido dinámico (carrusel) =====
+const LANG_STORAGE = "lang";
+
+function getLang() {
+    return localStorage.getItem(LANG_STORAGE) || "es";
+}
+
+function getPack() {
+    const lang = getLang();
+    return (window.dict && (window.dict[lang] || window.dict.es)) || {};
+}
+
+// Traducción simple con fallback
+function t(key, fallback = "") {
+    const pack = getPack();
+    return (key in pack) ? pack[key] : fallback;
+}
 
 // Variables globales
 let activeIndex = 0;
@@ -133,19 +151,51 @@ function initCarousel() {
 
     updateProjectSummary(projects[activeIndex]);
 
+    // projects.forEach((project, index) => {
+    //     const card = document.createElement('div');
+    //     card.className = getCardClass(index);
+    //     card.dataset.index = index;
+
+    //     card.innerHTML = `
+    //     <img src=${project.image} alt="${project.title}">
+    //         <h3>${project.title}</h3>
+    //         <p>${project.resumen}</p>
+    //         <button aria-label="Ver detalles del proyecto ${project.title}">
+    //             Ver Proyecto <i class="fas fa-arrow-right"></i>
+    //         </button>
+    //         `;
+
+    //     card.addEventListener('click', () => {
+    //         if (card.classList.contains('active')) {
+    //             window.open(project.url, '_self');
+    //         } else {
+    //             goToSlide(index);
+    //         }
+    //     });
+
+    //     card.querySelector('button').addEventListener('click', (e) => {
+    //         e.stopPropagation();
+    //         window.open(project.url, '_self');
+    //     });
+
+    //     handElement.appendChild(card);
+    // });
+
     projects.forEach((project, index) => {
         const card = document.createElement('div');
         card.className = getCardClass(index);
         card.dataset.index = index;
 
+        // Estructura neutra (sin textos hardcodeados)
         card.innerHTML = `
-        <img src=${project.image} alt="${project.title}">
-            <h3>${project.title}</h3>
-            <p>${project.resumen}</p>
-            <button aria-label="Ver detalles del proyecto ${project.title}">
-                Ver Proyecto <i class="fas fa-arrow-right"></i>
-            </button>
-            `;
+        <img src="${project.image}" alt="">
+        <h3 data-role="title"></h3>
+        <p data-role="summary"></p>
+        <button data-role="cta"></button>
+    `;
+
+        // Traducción inicial de la card
+        translateCard(card, project);
 
         card.addEventListener('click', () => {
             if (card.classList.contains('active')) {
@@ -155,13 +205,14 @@ function initCarousel() {
             }
         });
 
-        card.querySelector('button').addEventListener('click', (e) => {
+        card.querySelector('[data-role="cta"]').addEventListener('click', (e) => {
             e.stopPropagation();
             window.open(project.url, '_self');
         });
 
         handElement.appendChild(card);
     });
+
 
     projects.forEach((_, index) => {
         const dot = document.createElement('div');
@@ -194,12 +245,51 @@ function getCardClass(index) {
     return 'card hidden';
 }
 
+function translateCard(card, project) {
+    const title = t(project.titleKey, project.titleKey);
+    const resumen = t(project.resumenKey, "");
+    const ctaText = t("projects.card.cta", "Ver Proyecto");
+    const ariaTpl = t("projects.card.cta.aria", "Ver detalles del proyecto {title}");
+    const aria = ariaTpl.replace("{title}", title);
+
+    // Alt
+    const img = card.querySelector("img");
+    if (img) img.setAttribute("alt", title);
+
+    // Textos
+    const h3 = card.querySelector('[data-role="title"]');
+    if (h3) h3.textContent = title;
+
+    const p = card.querySelector('[data-role="summary"]');
+    if (p) p.textContent = resumen;
+
+    // Botón
+    const btn = card.querySelector('[data-role="cta"]');
+    if (btn) {
+        btn.setAttribute("aria-label", aria);
+        btn.innerHTML = `${ctaText} <i class="fas fa-arrow-right" aria-hidden="true"></i>`;
+    }
+}
+
+// function updateProjectSummary(project) {
+//     const projectSummary = document.querySelector('.project-summary');
+//     projectSummary.innerHTML = `
+//             <h2>${project.title}</h2>
+//             <p>${project.description}</p>
+//             `;
+// }
+
 function updateProjectSummary(project) {
     const projectSummary = document.querySelector('.project-summary');
+    if (!projectSummary) return;
+
+    const title = t(project.titleKey, "");
+    const desc = t(project.descKey, "");
+
     projectSummary.innerHTML = `
-            <h2>${project.title}</h2>
-            <p>${project.description}</p>
-            `;
+        <h2>${title}</h2>
+        <p>${desc}</p>
+    `;
 }
 
 function goToSlide(index) {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminales Personalizadas</title>
+    <title data-i18n="term.meta.title">Terminales Personalizadas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,91 +14,145 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" aria-label="Navegación principal" data-i18n-aria-label="term.nav.aria">
         <nav class="nav-links">
-            <a href="../../index.html">Volver a la pagina principal</a>
+            <a href="../../index.html" data-i18n="term.nav.back">Volver a la pagina principal</a>
         </nav>
+
+        <!-- Switch de idioma -->
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
     </header>
+
     <div class="container-gn">
         <section class="proyecto visible">
             <div class="container">
                 <div class="project-header">
                     <div>
                         <div class="project-status status-terminado">
-                            <i class="fa-solid fa-check"></i> Terminado
+                            <i class="fa-solid fa-check" aria-hidden="true"></i>
+                            <span data-i18n="term.status.done">Terminado</span>
                         </div>
-                        <h2>Terminales Personalizadas para PowerShell y CMD</h2>
+                        <h2 data-i18n="term.title">Terminales Personalizadas para PowerShell y CMD</h2>
                     </div>
+
                     <div class="project-actions">
-                        <button id="hurry-btn" class="btn btn-hurry">
-                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán para que lo mejore!
+                        <button id="hurry-btn" class="btn btn-hurry" data-i18n="term.hurryBtn">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i> ¡Apurar a Germán para que lo mejore!
                         </button>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Descripción del Proyecto</h3>
-                    <p>Este proyecto consiste en una personalización profunda de las terminales de
+                    <h3 data-i18n="term.section.descTitle">Descripción del Proyecto</h3>
+
+                    <p data-i18n="term.section.descP1">
+                        Este proyecto consiste en una personalización profunda de las terminales de
                         <strong>PowerShell</strong> y <strong>CMD</strong>, integrando estilo visual, detección
                         inteligente del entorno y una marca personal con arte ASCII y frases adaptables.
                     </p>
-                    <p>Los scripts cuentan con detección automática de entornos como Visual Studio para evitar
+
+                    <p data-i18n="term.section.descP2">
+                        Los scripts cuentan con detección automática de entornos como Visual Studio para evitar
                         ejecuciones no deseadas, además de mostrar la hora actual, tu apodo personalizado y un simpático
                         gato como firma visual. Todo esto se combina con un entorno amigable, práctico y estético para
-                        el día a día.</p>
-                    <quote>“Se ve clean. - yo</quote>
+                        el día a día.
+                    </p>
+
+                    <quote data-i18n="term.section.descQuote">“Se ve clean. - yo</quote>
                 </div>
 
                 <div class="project-section">
-                    <h3>Galería del Proyecto</h3>
+                    <h3 data-i18n="term.section.galleryTitle">Galería del Proyecto</h3>
                     <div class="project-gallery">
-                        <div class="gallery-item"><img src="imgs/consolas.png" alt="ambas terminales personalizadas">
+                        <div class="gallery-item">
+                            <img src="imgs/consolas.png" alt="ambas terminales personalizadas"
+                                data-i18n-title="term.gallery.alt1">
                         </div>
-                        <div class="gallery-item"><img src="imgs/cmd-cap.png" alt="terminal - CMD"></div>
-                        <div class="gallery-item"><img src="imgs/PowerShell-cap.png" alt="terminal - poershell"></div>
+                        <div class="gallery-item">
+                            <img src="imgs/cmd-cap.png" alt="terminal - CMD" data-i18n-title="term.gallery.alt2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/PowerShell-cap.png" alt="terminal - poershell"
+                                data-i18n-title="term.gallery.alt3">
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Tecnologías Utilizadas</h3>
+                    <h3 data-i18n="term.section.techTitle">Tecnologías Utilizadas</h3>
                     <ul class="tools-list">
-                        <li><span class="tool-icon"><i class="fa-solid fa-terminal"></i></span> PowerShell Scripting
-                            (`.ps1`)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-terminal"></i></span> CMD Scripting clásico
-                            (`.cmd`)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-brain"></i></span> Detección de entorno
-                            (Visual Studio)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-clock"></i></span> Impresión dinámica de hora
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                            <span data-i18n="term.tech.item1">PowerShell Scripting (<code>.ps1</code>)</span>
                         </li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-cat"></i></span> Arte ASCII personalizado</li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                            <span data-i18n="term.tech.item2">CMD Scripting clásico (<code>.cmd</code>)</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+                            <span data-i18n="term.tech.item3">Detección de entorno (Visual Studio)</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                            <span data-i18n="term.tech.item4">Impresión dinámica de hora</span>
+                        </li>
+                        <li>
+                            <span class="tool-icon"><i class="fa-solid fa-cat" aria-hidden="true"></i></span>
+                            <span data-i18n="term.tech.item5">Arte ASCII personalizado</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="project-section">
-                    <h3>Próximos Pasos</h3>
+                    <h3 data-i18n="term.section.nextTitle">Próximos Pasos</h3>
                     <ul class="next-steps-list">
-                        <li>Agregar alias útiles a PowerShell para tareas frecuentes</li>
-                        <li>Incluir animaciones básicas con efecto de máquina de escribir</li>
-                        <li>Versionar las configuraciones por estilo (oscuro, retro, clásico)</li>
-                        <li>Crear un script de instalación automática en sistemas Windows</li>
+                        <li data-i18n="term.next.item1">Agregar alias útiles a PowerShell para tareas frecuentes</li>
+                        <li data-i18n="term.next.item2">Incluir animaciones básicas con efecto de máquina de escribir
+                        </li>
+                        <li data-i18n="term.next.item3">Versionar las configuraciones por estilo (oscuro, retro,
+                            clásico)</li>
+                        <li data-i18n="term.next.item4">Crear un script de instalación automática en sistemas Windows
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-    <div class="lightbox">
-        <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
-        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes"
+        data-i18n-aria-label="term.lightbox.aria">
+        <button class="lightbox-close" aria-label="Cerrar" data-i18n-aria-label="term.lightbox.close">
+            <i class="fa-solid fa-times" aria-hidden="true"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Anterior" data-i18n-aria-label="term.lightbox.prev">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
         <div class="lightbox-content">
-            <img src="" alt="Imagen ampliada">
+            <img src="" alt="Imagen ampliada" data-i18n-title="term.lightbox.imgAlt">
         </div>
-        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="lightbox-nav lightbox-next" aria-label="Siguiente" data-i18n-aria-label="term.lightbox.next">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
     </div>
 
-    <a href="#" id="to-top" class="visible">
-        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+    <a href="#" id="to-top" class="visible" aria-label="Volver arriba" data-i18n-aria-label="term.toTop.aria">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span data-i18n="term.toTop">Volver arriba</span>
     </a>
+
+    <!-- i18n primero -->
+    <script type="module" src="../../Assets/Js/lang.js"></script>
+    <script type="module" src="../../Assets/Js/langSwich.js"></script>
+
+    <!-- Lógica de esta página -->
     <script type="module" src="../../Assets/Js/Projects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

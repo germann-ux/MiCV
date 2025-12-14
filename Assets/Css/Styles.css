@@ -304,11 +304,46 @@ section .container {
     border-bottom: none;
 }
 
-.outside ul li {
+/* .outside ul li {
     background: rgba(233, 216, 166, 0.13);
     border-left: 2px solid var(--color-accent);
     padding-left: 1.7rem;
     font-style: italic;
+} */
+/* .outside ul li {
+    display: grid;
+    grid-template-columns: 2.2em 1fr;
+    column-gap: 0.75em;
+    align-items: start;
+    padding-left: 1.2rem;
+}
+
+.outside ul li .badge {
+    margin-right: 0;
+    margin-top: 0.15em;
+}
+
+.outside ul li>span[data-i18n] {
+    display: block;
+    line-height: 1.55;
+} */
+
+.outside ul li {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding-left: 1.2rem;
+}
+
+.outside ul li .badge {
+    margin-right: 0;
+    flex: 0 0 auto;
+}
+
+/* Texto estable */
+.outside ul li>span[data-i18n] {
+    display: block;
+    line-height: 1.55;
 }
 
 /* === Sección: Contacto === */
