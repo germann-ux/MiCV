@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto | CABAE</title>
+    <title data-i18n="cabae.meta.title">Proyecto | CABAE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,115 +14,161 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" aria-label="Navegación principal">
         <nav class="nav-links">
-            <a href="../../index.html">Volver a la página principal</a>
+            <a href="../../index.html" data-i18n="cabae.nav.back">Volver a la página principal</a>
         </nav>
+
+        <!-- Switch de idioma -->
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
     </header>
+
     <div class="container-gn">
         <section class="proyecto visible">
             <div class="container">
                 <div class="project-header">
                     <div>
                         <div class="project-status status-desarrollo">
-                            <i class="fa-solid fa-code-branch"></i> En desarrollo
+                            <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+                            <span data-i18n="cabae.status.dev">En desarrollo</span>
                         </div>
-                        <h2>CABAE: Cifrado Cuántico Adaptativo</h2>
+                        <h2 data-i18n="cabae.title">CABAE: Cifrado Cuántico Adaptativo</h2>
                     </div>
                     <div class="project-actions">
-                        <!-- <a href="https://github.com/spogoo/CABAE" target="_blank" class="btn btn-primary">
-                            <i class="fa-brands fa-github"></i> Repositorio
-                        </a> -->
-                        <button id="hurry-btn" class="btn btn-hurry">
-                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán!
+                        <!-- Si habilitas repo, márcalo con data-i18n como abajo -->
+                        <!--
+            <a href="https://github.com/spogoo/CABAE" target="_blank" class="btn btn-primary" data-i18n="cabae.cta.repo">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> Repositorio
+            </a>
+            -->
+                        <button id="hurry-btn" class="btn btn-hurry" data-i18n="hurry.btn.initial">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i> ¡Apurar a Germán!
                         </button>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Descripción del Proyecto</h3>
-                    <p><strong>CABAE</strong> es un sistema de cifrado de nueva generación que combina principios de la
+                    <h3 data-i18n="cabae.section.descTitle">Descripción del Proyecto</h3>
+                    <p data-i18n="cabae.section.descP1">
+                        <strong>CABAE</strong> es un sistema de cifrado de nueva generación que combina principios de la
                         computación cuántica, como la aleatoriedad cuántica y el entrelazamiento, con técnicas clásicas
                         de seguridad. El objetivo es desarrollar un modelo de cifrado híbrido, adaptable y altamente
-                        resistente para entornos donde la seguridad de la información es crítica.</p>
-                    <p>El proyecto está actualmente en fase de desarrollo conceptual y experimental. Se explora el uso
+                        resistente para entornos donde la seguridad de la información es crítica.
+                    </p>
+                    <p data-i18n="cabae.section.descP2">
+                        El proyecto está actualmente en fase de desarrollo conceptual y experimental. Se explora el uso
                         de Qiskit y Azure Quantum para simular qubits y aprovechar sus propiedades en la generación de
                         claves aleatorias e intransferibles. CABAE también contempla la implementación de heurísticas de
-                        detección, telemetría y una interfaz visual moderna para su eventual interacción.</p>
-                    <quote>“CABAE no es solo cifrado: es un intento por anticiparse al futuro de la seguridad digital
+                        detección, telemetría y una interfaz visual moderna para su eventual interacción.
+                    </p>
+                    <quote data-i18n="cabae.section.descQuote">“CABAE no es solo cifrado: es un intento por anticiparse
+                        al futuro de la seguridad digital
                         desde hoy.”</quote>
                 </div>
 
                 <div class="project-section">
-                    <h3>Galería del Proyecto</h3>
+                    <h3 data-i18n="cabae.section.galleryTitle">Galería del Proyecto</h3>
                     <div class="project-gallery">
-                        <div class="gallery-item"><img src="imgs/EsferaBloch.png"
-                                alt="Esfera de Bloch representando un qubit"></div>
-                        <div class="gallery-item"><img src="imgs/CabaeTest.png"
-                                alt="Circuito y codigo de muestra en una prueba basica en la maqueta de CABAE"></div>
-                        <div class="gallery-item"><img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ53Vufk0F3KZlLNn-LZK_ws8V4kuIxtNyspiN3BN63E99p9WRapak4nQgYf4yP0Fhb2W4&usqp=CAU"
-                                alt="Logo de Qiskit usado en CABAE"></div>
-                        <div class="gallery-item"><img
-                                src="https://learn.microsoft.com/es-es/training/achievements/quantum/quantum-computing-fundamentals.svg"
-                                alt="Uso de Azure Quantum en CABAE"></div>
-                        <div class="gallery-item"><img
-                                src="https://miro.medium.com/v2/resize:fit:1400/1*Zq858Cx4WcGKpBERpoOkng.png"
-                                alt="Ilustración general de computación cuántica"></div>
+                        <div class="gallery-item">
+                            <img src="imgs/EsferaBloch.png" alt="Esfera de Bloch representando un qubit"
+                                data-i18n-title="cabae.gallery.alt1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/CabaeTest.png"
+                                alt="Circuito y codigo de muestra en una prueba basica en la maqueta de CABAE"
+                                data-i18n-title="cabae.gallery.alt2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ53Vufk0F3KZlLNn-LZK_ws8V4kuIxtNyspiN3BN63E99p9WRapak4nQgYf4yP0Fhb2W4&usqp=CAU"
+                                alt="Logo de Qiskit usado en CABAE" data-i18n-title="cabae.gallery.alt3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://learn.microsoft.com/es-es/training/achievements/quantum/quantum-computing-fundamentals.svg"
+                                alt="Uso de Azure Quantum en CABAE" data-i18n-title="cabae.gallery.alt4">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://miro.medium.com/v2/resize:fit:1400/1*Zq858Cx4WcGKpBERpoOkng.png"
+                                alt="Ilustración general de computación cuántica" data-i18n-title="cabae.gallery.alt5">
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Tecnologías Utilizadas</h3>
+                    <h3 data-i18n="cabae.section.techTitle">Tecnologías Utilizadas</h3>
                     <ul class="tools-list">
-                        <li><span class="tool-icon"><i class="fa-solid fa-atom"></i></span> Qiskit (IBM) para simulación
-                            cuántica</li>
-                        <li><span class="tool-icon"><i class="fa-brands fa-microsoft"></i></span> Azure Quantum para
-                            pruebas y experimentación</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-code"></i></span> Python como lenguaje
-                            principal</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-brain"></i></span> Algoritmos adaptativos de
-                            cifrado (híbrido clásico-cuántico)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-paintbrush"></i></span> HTML/CSS para interfaz
-                            visual del proyecto (todavia sin definir)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-file-code"></i></span> Simulador local en
-                            desarrollo</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-chart-bar"></i></span>Jupyter Notebooks para
-                            documentación y pruebas</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-atom" aria-hidden="true"></i></span> <span
+                                data-i18n="cabae.tech.item1">Qiskit (IBM) para simulación cuántica</span></li>
+                        <li><span class="tool-icon"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></span>
+                            <span data-i18n="cabae.tech.item2">Azure Quantum para pruebas y experimentación</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span> <span
+                                data-i18n="cabae.tech.item3">Python como lenguaje principal</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span> <span
+                                data-i18n="cabae.tech.item4">Algoritmos adaptativos de cifrado (híbrido
+                                clásico-cuántico)</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-paintbrush" aria-hidden="true"></i></span>
+                            <span data-i18n="cabae.tech.item5">HTML/CSS para interfaz visual del proyecto (todavía sin
+                                definir)</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-file-code" aria-hidden="true"></i></span>
+                            <span data-i18n="cabae.tech.item6">Simulador local en desarrollo</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i></span>
+                            <span data-i18n="cabae.tech.item7">Jupyter Notebooks para documentación y pruebas</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="project-section">
-                    <h3>Próximos Pasos</h3>
+                    <h3 data-i18n="cabae.section.nextTitle">Próximos Pasos</h3>
                     <ul class="next-steps-list">
-                        <li>Probar el prototipo de CABAE en un simulador cuántico real</li>
-                        <li>Establecer el modelo formal de generación de claves usando aleatoriedad cuántica</li>
-                        <li>Desarrollar y probar la heurística de cifrado híbrido con evaluación comparativa</li>
-                        <li>Diseñar una interfaz visual para pruebas y demostraciones</li>
-                        <li>Incluir un módulo de telemetría para auditoría interna y fallas</li>
-                        <li>Preparar una publicación técnica con la estructura matemática y conceptual</li>
+                        <li data-i18n="cabae.next.item1">Probar el prototipo de CABAE en un simulador cuántico real</li>
+                        <li data-i18n="cabae.next.item2">Establecer el modelo formal de generación de claves usando
+                            aleatoriedad cuántica</li>
+                        <li data-i18n="cabae.next.item3">Desarrollar y probar la heurística de cifrado híbrido con
+                            evaluación comparativa</li>
+                        <li data-i18n="cabae.next.item4">Diseñar una interfaz visual para pruebas y demostraciones</li>
+                        <li data-i18n="cabae.next.item5">Incluir un módulo de telemetría para auditoría interna y fallas
+                        </li>
+                        <li data-i18n="cabae.next.item6">Preparar una publicación técnica con la estructura matemática y
+                            conceptual</li>
                     </ul>
                 </div>
-
             </div>
         </section>
 
-
-        <div class="lightbox">
-            <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
-            <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes"
+            data-i18n-aria-label="cabae.lightbox.aria">
+            <button class="lightbox-close" aria-label="Cerrar" data-i18n-aria-label="cabae.lightbox.close">
+                <i class="fa-solid fa-times" aria-hidden="true"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" aria-label="Anterior" data-i18n-aria-label="cabae.lightbox.prev">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
             <div class="lightbox-content">
                 <img src="" alt="Imagen ampliada">
             </div>
-            <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="lightbox-nav lightbox-next" aria-label="Siguiente"
+                data-i18n-aria-label="cabae.lightbox.next">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
         </div>
 
         <a href="#" id="to-top" class="visible">
-            <i class="fa-solid fa-arrow-up"></i> Volver arriba
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+            <span data-i18n="cabae.toTop">Volver arriba</span>
         </a>
-
     </div>
 
+    <!-- i18n primero -->
+    <script type="module" src="../../Assets/Js/lang.js"></script>
+    <script type="module" src="../../Assets/Js/langSwich.js"></script>
+
+    <!-- Lógica de esta página -->
     <script type="module" src="../../Assets/Js/Projects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

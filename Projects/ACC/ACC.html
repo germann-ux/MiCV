@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACC - Aprendiendo C# con Charp</title>
+    <title data-i18n="acc.meta.title">ACC - Aprendiendo C# con Charp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../../Assets/Css/Styles.css">
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" aria-label="Navegación principal">
         <nav class="nav-links">
-            <a href="../../index.html">Volver a la página principal</a>
+            <a href="../../index.html" data-i18n="acc.nav.back">Volver a la página principal</a>
         </nav>
+
+        <!-- Switch de idioma -->
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
     </header>
 
     <div class="container-gn">
@@ -22,135 +32,165 @@
                 <div class="project-header">
                     <div>
                         <div class="project-status status-espera">
-                            <i class="fa-solid fa-code-branch"></i> En Pausa
+                            <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+                            <span data-i18n="acc.status.paused">En Pausa</span>
                         </div>
-                        <h2>ACC: Aprendiendo C# con Charp</h2>
+                        <h2 data-i18n="acc.title">ACC: Aprendiendo C# con Charp</h2>
                     </div>
+
                     <div class="project-actions">
-                        <a href="https://github.com/germann-ux/ACC-Complex" target="_blank" class="btn btn-primary">
-                            <i class="fa-brands fa-github"></i> Repositorio
+                        <a href="https://github.com/germann-ux/ACC-Complex" target="_blank" class="btn btn-primary"
+                            data-i18n="acc.cta.repo">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> Repositorio
                         </a>
-                        <a href="https://deepwiki.com/germann-ux/ACC-Complex" target="_blank" class="btn btn-secondary">
-                            <i class="fa-solid fa-book"></i> Wiki técnica
+                        <a href="https://deepwiki.com/germann-ux/ACC-Complex" target="_blank" class="btn btn-secondary"
+                            data-i18n="acc.cta.wiki">
+                            <i class="fa-solid fa-book" aria-hidden="true"></i> Wiki técnica
                         </a>
-                        <button id="hurry-btn" class="btn btn-hurry">
-                            <i class="fa-solid fa-bolt"></i> ¡Apurar a Germán!
+                        <button id="hurry-btn" class="btn btn-hurry" data-i18n="hurry.btn.initial">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i> ¡Apurar a Germán!
                         </button>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Descripción del Proyecto</h3>
-                    <p><strong>ACC</strong> (Aprendiendo C# con Charp) es una plataforma educativa para aprender
+                    <h3 data-i18n="acc.section.descTitle">Descripción del Proyecto</h3>
+                    <p data-i18n="acc.section.descP1"><strong>ACC</strong> (Aprendiendo C# con Charp) es una plataforma
+                        educativa para aprender
                         programación en C# desde cero hasta un nivel avanzado, todo guiado por una inteligencia
                         artificial llamada <strong>Charp</strong>, tu maestro digital.</p>
-                    <p>El proyecto combina teoría, prácticas interactivas, juegos didácticos (como crucigramas y
+                    <p data-i18n="acc.section.descP2">El proyecto combina teoría, prácticas interactivas, juegos
+                        didácticos (como crucigramas y
                         memoramas), evaluaciones automáticas, un compilador de c# en tiempo real y seguimiento de
                         progreso personalizado. ACC está diseñado
                         para ser modular, expansible y adaptable a distintos niveles de conocimiento, desde
                         principiantes hasta programadores intermedios.</p>
-                    <quote>(Originalmente fue pensado para una competencia, ahora quiero darle otro rumbo)</quote>
+                    <quote data-i18n="acc.section.descQuote">(Originalmente fue pensado para una competencia, ahora
+                        quiero darle otro rumbo)</quote>
                 </div>
 
                 <div class="project-section">
-                    <h3>Galería del Proyecto</h3>
+                    <h3 data-i18n="acc.section.galleryTitle">Galería del Proyecto</h3>
                     <div class="project-gallery">
-                        <div class="gallery-item"><img src="imgs/InicioACC.png"
-                                alt="Vista de inicio con gráfico de progreso">
-                        </div>
-                        <div class="gallery-item"><img src="imgs/capCompACC.png" alt="Lección interactiva en ACC">
-                        </div>
-                        <div class="gallery-item"><img src="imgs/charpSaludo.png" alt="Chat con Charp, IA educativa">
-                        </div>
-                        <div class="gallery-item"><img src="imgs/GuiaEvaluacion.png"
-                                alt="Evaluación automatizada y guia de estudio">
-                        </div>
-                        <div class="gallery-item"><img src="imgs/Inicio2ACC.png"
-                                alt="Vista del sistema de tareas y agenda">
+                        <div class="gallery-item">
+                            <img src="imgs/InicioACC.png" alt="Vista de inicio con gráfico de progreso"
+                                data-i18n-title="acc.gallery.alt1">
                         </div>
                         <div class="gallery-item">
-                            <img src="imgs/menuACC.png" alt="Menú de navegación del proyecto ACC">
+                            <img src="imgs/capCompACC.png" alt="Lección interactiva en ACC"
+                                data-i18n-title="acc.gallery.alt2">
                         </div>
                         <div class="gallery-item">
-                            <img src="imgs/Landingpage.png" alt="pagina inicial de ACC">
+                            <img src="imgs/charpSaludo.png" alt="Chat con Charp, IA educativa"
+                                data-i18n-title="acc.gallery.alt3">
                         </div>
                         <div class="gallery-item">
-                            <img src="imgs/DiagramaER.png" alt="diagrama de la base de datos de ACC">
+                            <img src="imgs/GuiaEvaluacion.png" alt="Evaluación automatizada y guia de estudio"
+                                data-i18n-title="acc.gallery.alt4">
                         </div>
                         <div class="gallery-item">
-                            <img src="imgs/DasboardACC.png" alt="dashboard de ACC con estados de servicios">
+                            <img src="imgs/Inicio2ACC.png" alt="Vista del sistema de tareas y agenda"
+                                data-i18n-title="acc.gallery.alt5">
                         </div>
                         <div class="gallery-item">
-                            <img src="imgs/DasboardDr.png" alt="diagrama visual de los servicios de ACC">
+                            <img src="imgs/menuACC.png" alt="Menú de navegación del proyecto ACC"
+                                data-i18n-title="acc.gallery.alt6">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/Landingpage.png" alt="pagina inicial de ACC"
+                                data-i18n-title="acc.gallery.alt7">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/DiagramaER.png" alt="diagrama de la base de datos de ACC"
+                                data-i18n-title="acc.gallery.alt8">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/DasboardACC.png" alt="dashboard de ACC con estados de servicios"
+                                data-i18n-title="acc.gallery.alt9">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="imgs/DasboardDr.png" alt="diagrama visual de los servicios de ACC"
+                                data-i18n-title="acc.gallery.alt10">
                         </div>
                     </div>
                 </div>
 
                 <div class="project-section">
-                    <h3>Tecnologías Utilizadas</h3>
+                    <h3 data-i18n="acc.section.techTitle">Tecnologías Utilizadas</h3>
                     <ul class="tools-list">
-                        <!-- Lenguajes y Frameworks -->
-                        <li><span class="tool-icon"><i class="fa-solid fa-code"></i></span> C# 12 con .NET 8</li>
-                        <li><span class="tool-icon"><i class="fa-brands fa-microsoft"></i></span> Blazor WebAssembly y
-                            MAUI Blazor</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-database"></i></span> SQL Server 2022 + Entity
-                            Framework Core</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-brain"></i></span> Roslyn (.NET Compiler
-                            Platform) para compilación dinámica</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item1">C# 12 con .NET 8</span></li>
+                        <li><span class="tool-icon"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></span>
+                            <span data-i18n="acc.tech.item2">Blazor WebAssembly y MAUI Blazor</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item3">SQL Server 2022 + Entity Framework Core</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item4">Roslyn (.NET Compiler Platform) para compilación
+                                dinámica</span></li>
 
-                        <!-- Arquitectura y Backend -->
-                        <li><span class="tool-icon"><i class="fa-solid fa-network-wired"></i></span> Arquitectura
-                            distribuida con .NET Aspire</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-cubes-stacked"></i></span> Comunicación entre
-                            servicios vía DTOs y capas desacopladas</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-microchip"></i></span> Redis para caché
-                            distribuido y rendimiento</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-terminal"></i></span> AutoMapper,
-                            FluentValidation y Serilog</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span>
+                            <span data-i18n="acc.tech.item5">Arquitectura distribuida con .NET Aspire</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i></span>
+                            <span data-i18n="acc.tech.item6">Comunicación entre servicios vía DTOs y capas
+                                desacopladas</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
+                            <span data-i18n="acc.tech.item7">Redis para caché distribuido y rendimiento</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item8">AutoMapper, FluentValidation y Serilog</span></li>
 
-                        <!-- DevOps y Observabilidad -->
-                        <li><span class="tool-icon"><i class="fa-brands fa-docker"></i></span> Contenerización con
-                            Docker</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-eye"></i></span> Telemetría y monitoreo con
-                            OpenTelemetry</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-vial"></i></span> Pruebas unitarias con xUnit
-                            y Moq</li>
+                        <li><span class="tool-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item9">Contenerización con Docker</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item10">Telemetría y monitoreo con OpenTelemetry</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-vial" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item11">Pruebas unitarias con xUnit y Moq</span></li>
 
-                        <!-- Herramientas adicionales -->
-                        <li><span class="tool-icon"><i class="fa-solid fa-user-astronaut"></i></span> Chatbase para IA
-                            Charp (orientada a enseñanza de C#)</li>
-                        <li><span class="tool-icon"><i class="fa-solid fa-gears"></i></span> Git, GitHub y Postman para
-                            control y pruebas</li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-user-astronaut" aria-hidden="true"></i></span>
+                            <span data-i18n="acc.tech.item12">Chatbase para IA Charp (orientada a enseñanza de
+                                C#)</span></li>
+                        <li><span class="tool-icon"><i class="fa-solid fa-gears" aria-hidden="true"></i></span> <span
+                                data-i18n="acc.tech.item13">Git, GitHub y Postman para control y pruebas</span></li>
                     </ul>
                 </div>
 
-
                 <div class="project-section">
-                    <h3>Próximos Pasos</h3>
+                    <h3 data-i18n="acc.section.nextTitle">Próximos Pasos</h3>
                     <ul class="next-steps-list">
-                        <li>Finalizar las vistas para los docentes en la pagina</li>
-                        <li>Migrar componentes a la aplicacion MAUI para cerrar el ecosistema multiplataforma</li>
-                        <li>Integrar el sistema completo de biblioteca con filtros</li>
-                        <li>Publicar versión MVP para pruebas públicas</li>
-                        <li>Aplicar pruebas con estudiantes reales</li>
+                        <li data-i18n="acc.next.item1">Finalizar las vistas para los docentes en la pagina</li>
+                        <li data-i18n="acc.next.item2">Migrar componentes a la aplicacion MAUI para cerrar el ecosistema
+                            multiplataforma</li>
+                        <li data-i18n="acc.next.item3">Integrar el sistema completo de biblioteca con filtros</li>
+                        <li data-i18n="acc.next.item4">Publicar versión MVP para pruebas públicas</li>
+                        <li data-i18n="acc.next.item5">Aplicar pruebas con estudiantes reales</li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-    <div class="lightbox">
-        <button class="lightbox-close"><i class="fa-solid fa-times"></i></button>
-        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes"
+        data-i18n-aria-label="acc.lightbox.aria">
+        <button class="lightbox-close" aria-label="Cerrar" data-i18n-aria-label="acc.lightbox.close"><i
+                class="fa-solid fa-times" aria-hidden="true"></i></button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Anterior" data-i18n-aria-label="acc.lightbox.prev"><i
+                class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
         <div class="lightbox-content">
             <img src="" alt="Imagen ampliada">
         </div>
-        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="lightbox-nav lightbox-next" aria-label="Siguiente" data-i18n-aria-label="acc.lightbox.next"><i
+                class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
     </div>
 
     <a href="#" id="to-top" class="visible">
-        <i class="fa-solid fa-arrow-up"></i> Volver arriba
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span data-i18n="acc.toTop">Volver arriba</span>
     </a>
+
+    <!-- i18n primero -->
+    <script type="module" src="../../Assets/Js/lang.js"></script>
+    <script type="module" src="../../Assets/Js/langSwich.js"></script>
+
+    <!-- Lógica de esta página -->
     <script type="module" src="../../Assets/Js/Projects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

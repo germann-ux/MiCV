@@ -1,14 +1,14 @@
 /* === Variables globales === */
 :root {
-    --color-bg: #f7f8fa;
-    --color-section: #fdf6ee;
-    --color-text: #1a2233;
-    --color-accent: #e9d8a6;
-    --color-link: #6c8cbf;
-    --color-shadow: rgba(108, 140, 191, 0.10);
-    --color-outline: rgba(233, 216, 166, 0.18);
     --font-title: 'Libre Baskerville', serif;
     --font-body: 'Inter', sans-serif;
+    --color-bg: #0a0d14;
+    --color-section: #151a24;
+    --color-text: #e1e2e6;
+    --color-accent: #e9d8a6;
+    --color-link: #8ca3d3;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-outline: rgba(233, 216, 166, 0.15);
 }
 
 /* === Reset suave === */
@@ -513,45 +513,32 @@ li:hover .badge {
     }
 }
 
-/* Tema oscuro para dispositivos */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: #0a0d14;
-        --color-section: #151a24;
-        --color-text: #e1e2e6;
-        --color-accent: #e9d8a6;
-        --color-link: #8ca3d3;
-        --color-shadow: rgba(0, 0, 0, 0.3);
-        --color-outline: rgba(233, 216, 166, 0.15);
-    }
+.container {
+    background: rgba(26, 34, 51, 0.85);
+}
 
-    .container {
-        background: rgba(26, 34, 51, 0.85);
-    }
+ul li {
+    background: rgba(233, 216, 166, 0.05);
+}
 
-    ul li {
-        background: rgba(233, 216, 166, 0.05);
-    }
+ul li:hover {
+    background: rgba(233, 216, 166, 0.1);
+}
 
-    ul li:hover {
-        background: rgba(233, 216, 166, 0.1);
-    }
+#stack-tecnico ul li {
+    background: rgba(108, 140, 191, 0.05);
+}
 
-    #stack-tecnico ul li {
-        background: rgba(108, 140, 191, 0.05);
-    }
+.outside ul li {
+    background: rgba(233, 216, 166, 0.07);
+}
 
-    .outside ul li {
-        background: rgba(233, 216, 166, 0.07);
-    }
+.contacto ul li {
+    background: rgba(108, 140, 191, 0.05);
+}
 
-    .contacto ul li {
-        background: rgba(108, 140, 191, 0.05);
-    }
-
-    quote {
-        background: rgba(233, 216, 166, 0.07);
-    }
+quote {
+    background: rgba(233, 216, 166, 0.07);
 }
 
 /*Baraja*/
@@ -567,19 +554,6 @@ iframe {
     width: 0;
     height: 0;
 }
-
-/* :root {
-      --color-bg: #f7f8fa;
-      --color-section: #fdf6ee;
-      --color-text: #1a2233;
-      --color-accent: #e9d8a6;
-      --color-link: #6c8cbf;
-      --color-shadow: rgba(108, 140, 191, 0.10);
-      --color-outline: rgba(233, 216, 166, 0.18);
-      --font-title: &#039;Libre Baskerville&#039;, serif;
-      --font-body: &#039;Inter&#039;, sans-serif;
-    } */
-
 
 /* Carrusel de Proyectos */
 .hand-container {
@@ -812,262 +786,6 @@ iframe {
 
     } */
 }
-
-/* estilos para los proyectos: */
-/* root {
-    --color-bg: #f7f8fa;
-    --color-section: #fdf6ee;
-    --color-text: #1a2233;
-    --color-accent: #e9d8a6;
-    --color-link: #6c8cbf;
-    --color-shadow: rgba(108, 140, 191, 0.10);
-    --color-outline: rgba(233, 216, 166, 0.18);
-} */
-
-/* === Reset suave === */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-/* 
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-    background-color: #1a2233;
-    color: var(--color-text);
-    font-family: var(--font-body);
-    line-height: 1.7;
-} */
-/* 
-body {
-    width: 100%;
-    overflow-x: hidden;
-    background: linear-gradient(180deg, #344466, #1a2233, #0F1620);
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    padding-top: 70px;
-} */
-
-/* === Barra de navegación === */
-/* .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(26, 34, 51, 0.9);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid rgba(233, 216, 166, 0.2);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-} */
-
-/* .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.nav-links a {
-    color: var(--color-accent);
-    border-bottom: none;
-    padding: 0.5rem 0.8rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: 0.8;
-}
-
-.nav-links a:hover {
-    background-color: rgba(233, 216, 166, 0.2);
-    color: white;
-    opacity: 1;
-} */
-
-/* === Contenedor genérico para el cuerpo === */
-/* .container-gn {
-    margin: 1rem auto;
-    max-width: 1400px;
-} */
-
-/* === Contenedor genérico === */
-/* .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    box-shadow: 0 2px 24px var(--color-shadow);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    min-width: 320px;
-} */
-
-/* === Títulos generales === */
-/* h1,
-h2,
-h3 {
-    font-family: var(--font-title);
-    color: var(--color-text);
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
-} */
-
-/* h1 {
-    font-size: 3rem;
-    font-weight: normal;
-    letter-spacing: 1px;
-    text-align: center;
-    text-shadow: 0 2px 12px var(--color-shadow);
-}
-
-
-h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    border-bottom: 1px solid var(--color-accent);
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-link);
-}
-
-.hero-text h2 {
-    background: linear-gradient(90deg, #3e5ca7 0%, var(--color-link) 50%, #3e5ca7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-size: 3rem;
-}
-
-h3 {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    background: linear-gradient(90deg, #3e5ca7 0%, #EBB866 50%, #3e5ca7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-} */
-
-/* === Párrafos y listas === */
-/* p {
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    font-size: 1.08rem;
-    color: var(--color-text);
-    opacity: 0.92;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 2rem;
-}
-
-ul li {
-    margin-bottom: 1rem;
-    position: relative;
-    padding: 0.8rem 1rem 0.8rem 1.5rem;
-    font-size: 1.05rem;
-    opacity: 0.95;
-    transition: all 0.2s;
-    border-radius: 6px;
-    background: rgba(233, 216, 166, 0.07);
-}
-
-ul li:hover {
-    background: rgba(233, 216, 166, 0.15);
-    transform: translateX(4px);
-} */
-
-/* === Enlaces === */
-/* a {
-    color: var(--color-link);
-    text-decoration: none;
-    transition: color 0.2s ease, border-bottom 0.2s;
-    border-bottom: 1px dotted var(--color-link);
-}
-
-a:hover {
-    color: var(--color-accent);
-    border-bottom: 1px solid var(--color-accent);
-} */
-
-/* === Secciones === */
-/* section {
-    border-top: 1px solid var(--color-outline);
-    background-color: var(--color-bg);
-    margin-bottom: 2.5rem;
-    box-shadow: 0 1px 12px var(--color-shadow);
-    border-radius: 14px;
-    transition: all 0.4s;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    max-width: 1200px;
-    opacity: 0;
-    transform: translateY(20px);
-} */
-
-/* section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-section:nth-of-type(even) {
-    background-color: var(--color-bg);
-    box-shadow: 0 2px 24px var(--color-shadow);
-}
-
-section .container {
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-} */
-
-/* Citas */
-/* quote {
-    display: block;
-    font-style: italic;
-    padding: 1rem 2rem;
-    border-left: 4px solid var(--color-accent);
-    background: rgba(233, 216, 166, 0.1);
-    margin-bottom: 2rem;
-    border-radius: 0 10px 10px 0;
-    font-size: 1.1rem;
-} */
-
-/* Iconos */
-/* .badge {
-    display: inline-block;
-    background: var(--color-accent);
-    color: black;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    text-align: center;
-    line-height: 2em;
-    margin-right: 0.7em;
-    font-size: 1.1em;
-    box-shadow: 0 2px 8px var(--color-shadow);
-    vertical-align: middle;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-} */
-/* 
-li:hover .badge {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 4px 12px rgba(108, 140, 191, 0.3);
-} */
 
 /* === Botón flotante === */
 #to-top {
@@ -1315,6 +1033,63 @@ li:hover .badge {
     color: white;
     animation: pulse 1.5s infinite;
 }
+
+/* boton del swicth de idiomas*/
+/* Contenedor del switch */
+.lang-switch {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    margin-left: 2rem;
+    /* empuja al extremo derecho de la navbar */
+}
+
+/* Estado activo: cuando aria-pressed="true" se ve como primario */
+.lang-switch .btn[aria-pressed="true"] {
+    background: var(--color-link);
+    color: #fff;
+    border: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+/* Estado inactivo: se ve como secundario */
+.lang-switch .btn[aria-pressed="false"] {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+}
+
+/* Hover/Focus accesible */
+.lang-switch .btn:hover,
+.lang-switch .btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 216, 166, 0.25);
+    outline: 2px solid var(--color-outline);
+    outline-offset: 2px;
+}
+
+/* Icono + etiqueta */
+.lang-switch .btn i {
+    font-size: .9rem;
+}
+
+.lang-switch .btn span {
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+/* Ajuste móvil (si tu navbar colapsa) */
+@media (max-width: 640px) {
+    .lang-switch {
+        gap: .35rem;
+    }
+
+    .lang-switch .btn {
+        padding: .45rem .7rem;
+    }
+}
+
 
 @keyframes pulse {
     0% {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Germán Uriel Evangelista Martínez | CV</title>
+    <title data-i18n="meta.title">Germán Uriel Evangelista Martínez | CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,29 +14,38 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
         <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#stack-tecnico">Stack Técnico</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#outside">Fuera del Código</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio" data-i18n="nav.home">Inicio</a>
+            <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+            <a href="#stack-tecnico" data-i18n="nav.stack">Stack Técnico</a>
+            <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+            <a href="#outside" data-i18n="nav.outside">Fuera del Código</a>
+            <a href="#contacto" data-i18n="nav.contact">Contacto</a>
         </div>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
+            </button>
+            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
+            </button>
+        </div>
+
     </nav>
 
-    <a href="#inicio" id="to-top" aria-label="Volver arriba">
-        <i class="fa-solid fa-chevron-up"></i>
-        <span>Inicio</span>
+    <a href="#inicio" id="to-top" aria-label="Volver arriba" data-i18n-aria-label="toTop.aria">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+        <span data-i18n="toTop.label">Inicio</span>
     </a>
 
     <div class="container-gn">
         <section id="inicio" class="hero visible">
             <div class="container">
                 <div class="hero-text">
-                    <h2>¿QUIÉN SOY?</h2>
+                    <h2 data-i18n="hero.title">¿QUIÉN SOY?</h2>
                 </div>
-                <p class="lead">
+                <p class="lead" data-i18n="hero.lead">
                     Mi nombre es Germán Uriel Evangelista Martínez, soy un joven de 17 años originario de Abasolo,
                     Guanajuato, México,
                     apasionado por la tecnología, la ingeniería y el aprendizaje autodidacta.
@@ -46,7 +55,7 @@
                     profundamente.
                 </p>
 
-                <quote>
+                <quote data-i18n="hero.quote">
                     No me considero un experto, pero sí alguien comprometido con aprender, mejorar y aportar desde
                     lo que sé y lo que estoy construyendo.
                 </quote>
@@ -55,27 +64,27 @@
 
         <section id="sobre-mi" class="about">
             <div class="container">
-                <h2>Sobre mí</h2>
-                <p>
+                <h2 data-i18n="about.title">Sobre mí</h2>
+                <p data-i18n="about.p1">
                     Desde que comencé a aprender por mi cuenta, descubrí que la verdadera educación nace de la
                     curiosidad. No tuve acceso a cursos caros ni mentores constantes; aprendí leyendo documentación,
                     desarmando sistemas y preguntándome ¿cómo puedo hacerlo mejor?
                 </p>
-                <p>
+                <p data-i18n="about.p2">
                     No vengo de una educación privilegiada ni de una academia de renombre. Aprendí desde cero, en mi
                     habitación, con curiosidad, esfuerzo y una necesidad profunda de entender cómo funciona el mundo que
                     nos rodea.
                 </p>
-                <p>
+                <p data-i18n="about.p3">
                     Mi motivación no son los títulos, sino el reto intelectual, la posibilidad de construir algo que
                     funcione, y la certeza de que siempre puedo aprender más.
                 </p>
-                <p>
+                <p data-i18n="about.p4">
                     Creo que el conocimiento tiene sentido cuando se convierte en acción. Por eso, no solo estudio
                     teoría: creo prototipos, desarrollo software funcional, investigo nuevas tecnologías y comparto lo
                     que sé.
                 </p>
-                <p>
+                <p data-i18n="about.p5">
                     No me detienen los obstáculos: me impulsan. Me esfuerzo por dominar lo que otros dan por sentado y
                     convertirme en alguien que no solo entiende la tecnología, sino que la moldea.
                 </p>
@@ -84,89 +93,157 @@
 
         <section id="stack-tecnico">
             <div class="container">
-                <h2>Stack técnico</h2>
+                <h2 data-i18n="stack.title">Stack técnico</h2>
 
-                <h3>Lenguajes y tecnologías que uso con regularidad:</h3>
+                <h3 data-i18n="stack.regularTitle">Lenguajes y tecnologías que uso con regularidad:</h3>
                 <ul>
-                    <li><span class="badge"><i class="fa-brands fa-microsoft"></i></span> C# (.NET 6/7/8, Blazor, MAUI,
-                        .NET Framework con Windows Forms)</li>
-                    <li><span class="badge"><i class="fa-solid fa-database"></i></span> SQL (SQL Server con SSMS, MySQL)
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.regular.item1">C# (.NET 6/7/8, Blazor, MAUI, .NET Framework con Windows
+                            Forms)</span>
                     </li>
-                    <li><span class="badge"><i class="fa-brands fa-python"></i></span> Python (scripts, automatización,
-                        análisis de datos)</li>
-                    <li><span class="badge"><i class="fa-brands fa-html5"></i></span> HTML, CSS, JavaScript
-                        (aplicaciones web funcionales)</li>
-                </ul>
-
-                <h3>Herramientas y entornos:</h3>
-                <ul>
-                    <li><span class="badge"><i class="fa-solid fa-code"></i></span> Visual Studio, Visual Studio Code
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.regular.item2">SQL (SQL Server con SSMS, MySQL)</span>
                     </li>
-                    <li><span class="badge"><i class="fa-brands fa-git-alt"></i></span> Git y GitHub</li>
-                    <li><span class="badge"><i class="fa-brands fa-docker"></i></span> Docker, Aspire</li>
-                    <li><span class="badge"><i class="fa-solid fa-microchip"></i></span> Arduino IDE (automatización con
-                        sensores, módulos y lógica de control)</li>
-                    <li><span class="badge"><i class="fa-brands fa-linux"></i></span> WSL (Windows Subsystem for Linux),
-                        Ubuntu</li>
-                    <li><span class="badge"><i class="fa-solid fa-paper-plane"></i></span> Postman, DBeaver, SSMS</li>
-                    <li><span class="badge"><i class="fa-solid fa-chart-line"></i></span> Jupyter Notebook / Jupyter Lab
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-python" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.regular.item3">Python (scripts, automatización, análisis de datos)</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-html5" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.regular.item4">HTML, CSS, JavaScript (aplicaciones web
+                            funcionales)</span>
                     </li>
                 </ul>
 
-                <h3>Fortalezas técnicas:</h3>
+                <h3 data-i18n="stack.toolsTitle">Herramientas y entornos:</h3>
                 <ul>
-                    <li><span class="badge"><i class="fa-solid fa-layer-group"></i></span> Desarrollo full-stack en el
-                        ecosistema .NET (incluyendo Windows Forms en .NET Framework)</li>
-                    <li><span class="badge"><i class="fa-solid fa-sitemap"></i></span> Diseño modular y escalable</li>
-                    <li><span class="badge"><i class="fa-solid fa-robot"></i></span> Integración de software con
-                        hardware (Arduino)</li>
-                    <li><span class="badge"><i class="fa-solid fa-brain"></i></span> Capacidad de autoaprendizaje y
-                        resolución lógica de problemas</li>
-                    <li><span class="badge"><i class="fa-solid fa-hammer"></i></span> Experiencia real construyendo
-                        plataformas, herramientas y prototipos funcionales</li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item1">Visual Studio, Visual Studio Code</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-git-alt" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item2">Git y GitHub</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-docker" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item3">Docker, Aspire</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item4">Arduino IDE (automatización con sensores, módulos y lógica
+                            de control)</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-linux" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item5">WSL (Windows Subsystem for Linux), Ubuntu</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item6">Postman, DBeaver, SSMS</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.tools.item7">Jupyter Notebook / Jupyter Lab</span>
+                    </li>
                 </ul>
 
-                <h3>También tengo conocimientos en los siguientes lenguajes y herramientas:</h3>
+                <h3 data-i18n="stack.strengthsTitle">Fortalezas técnicas:</h3>
                 <ul>
-                    <li><span class="badge"><i class="fa-solid fa-hashtag"></i></span> F# – lógica funcional básica
-                        dentro del entorno .NET</li>
-                    <li><span class="badge"><i class="fa-solid fa-plus"></i></span> C++ – aplicado a proyectos con
-                        Arduino y microcontroladores</li>
-                    <li><span class="badge"><i class="fa-solid fa-terminal"></i></span> Bash y Linux – scripting,
-                        navegación y administración básica</li>
-                    <li><span class="badge"><i class="fa-solid fa-gamepad"></i></span> Unity + C# – desarrollo de
-                        videojuegos 2D experimentales</li>
-                    <li><span class="badge"><i class="fa-solid fa-file-code"></i></span> Markdown – documentación
-                        técnica estructurada</li>
-                    <li><span class="badge"><i class="fa-solid fa-atom"></i></span> Q# – fundamentos de programación
-                        cuántica con Azure Quantum</li>
-                    <li><span class="badge"><i class="fa-solid fa-atom"></i></span> Qiskit – diseño de circuitos
-                        cuánticos y lógica de cifrado en Python (proyecto CABAE)</li>
-                    <li><span class="badge"><i class="fa-solid fa-cogs"></i></span> .NET CLR – comprensión del ciclo de
-                        vida del código dentro del Common Language Runtime</li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.strengths.item1">Desarrollo full-stack en el ecosistema .NET (incluyendo
+                            Windows Forms en .NET Framework)</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.strengths.item2">Diseño modular y escalable</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.strengths.item3">Integración de software con hardware (Arduino)</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.strengths.item4">Capacidad de autoaprendizaje y resolución lógica de
+                            problemas</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-hammer" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.strengths.item5">Experiencia real construyendo plataformas, herramientas
+                            y prototipos funcionales</span>
+                    </li>
+                </ul>
+
+                <h3 data-i18n="stack.otherTitle">También tengo conocimientos en los siguientes lenguajes y herramientas:
+                </h3>
+                <ul>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-hashtag" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item1">F# – lógica funcional básica dentro del entorno .NET</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item2">C++ – aplicado a proyectos con Arduino y
+                            microcontroladores</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item3">Bash y Linux – scripting, navegación y administración
+                            básica</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-gamepad" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item4">Unity + C# – desarrollo de videojuegos 2D
+                            experimentales</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-file-code" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item5">Markdown – documentación técnica estructurada</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-atom" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item6">Q# – fundamentos de programación cuántica con Azure
+                            Quantum</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-atom" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item7">Qiskit – diseño de circuitos cuánticos y lógica de cifrado
+                            en Python (proyecto CABAE)</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-cogs" aria-hidden="true"></i></span>
+                        <span data-i18n="stack.other.item8">.NET CLR – comprensión del ciclo de vida del código dentro
+                            del Common Language Runtime</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section id="proyectos" class="projects">
             <div class="container">
-                <h2>Proyectos</h2>
+                <h2 data-i18n="projects.title">Proyectos</h2>
                 <!-- Renamed from carousel-container -->
-                <div role="region" aria-label="Carrusel de Proyectos" class="hand">
+                <div role="region" aria-label="Carrusel de Proyectos" class="hand"
+                    data-i18n-aria-label="projects.carousel.aria">
                     <!-- Cards will be generated dynamically with JavaScript -->
                 </div>
                 <div class="carousel-controls">
-                    <button class="control-btn prev" aria-label="Proyecto anterior">
-                        <i class="fas fa-chevron-left"></i>
+                    <button class="control-btn prev" aria-label="Proyecto anterior"
+                        data-i18n-aria-label="projects.controls.prev.aria">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <button class="control-btn next" aria-label="Proyecto siguiente">
-                        <i class="fas fa-chevron-right"></i>
+                    <button class="control-btn next" aria-label="Proyecto siguiente"
+                        data-i18n-aria-label="projects.controls.next.aria">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
                 <br>
                 <!-- Add project summary container below the hand of cards -->
-                <div class="project-summary" aria-live="polite"></div>
-                <div class="dots">
+                <div class="project-summary" aria-live="polite" data-i18n="projects.summary"></div>
+                <div class="dots" aria-label="Indicadores de carrusel" data-i18n-aria-label="projects.dots.aria">
                     <!-- Los dots se generarán dinámicamente con JavaScript -->
                 </div>
             </div>
@@ -174,51 +251,90 @@
 
         <section id="outside" class="outside">
             <div class="container">
-                <h2>Yo fuera del código</h2>
+                <h2 data-i18n="outside.title">Yo fuera del código</h2>
                 <ul>
-                    <li><span class="badge"><i class="fa-solid fa-palette"></i></span> Apasionado por la ilustración, la
-                        pintura, el dibujo digital y a lápiz; encuentro en el arte una forma de traducir ideas complejas
-                        de manera visual.</li>
-                    <li><span class="badge"><i class="fa-solid fa-brain"></i></span> Entusiasta de la filosofía;
-                        disfruto cuestionar, reflexionar y entender el mundo desde la mente.</li>
-                    <li><span class="badge"><i class="fa-solid fa-square-root-variable"></i></span> Fascinado por las
-                        matemáticas aplicadas y los patrones que rigen el mundo.</li>
-                    <li><span class="badge"><i class="fa-solid fa-atom"></i></span> Amante de la física, con especial
-                        interés en la mecánica cuántica y sus implicaciones en la naturaleza del universo.</li>
-                    <li><span class="badge"><i class="fa-solid fa-microchip"></i></span> Apasionado por la computación
-                        cuántica y su potencial disruptivo en el mundo real.</li>
-                    <li><span class="badge"><i class="fa-solid fa-pen-nib"></i></span> Escribo por impulso creativo:
-                        desde poesía hasta historias e ideas conceptuales. La escritura es mi espacio para filosofar sin
-                        restricciones.</li>
-                    <li><span class="badge"><i class="fa-solid fa-heart"></i></span> Me gusta combinar lo técnico con lo
-                        emocional; construir sistemas con sentido en mi filosofía personal me inspira.</li>
-                    <li><span class="badge"><i class="fa-solid fa-flask"></i></span> Creo en el poder del conocimiento
-                        multidisciplinario: una mente que conecta ciencia, arte y lógica puede crear cosas únicas.</li>
-                    <li><span class="badge"><i class="fa-solid fa-masks-theater"></i></span> No busco parecerme a nadie.
-                        Busco crear lo que aún no existe.</li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item1">Apasionado por la ilustración, la pintura, el dibujo digital y a
+                            lápiz; encuentro en el arte una forma de traducir ideas complejas de manera visual.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item2">Entusiasta de la filosofía; disfruto cuestionar, reflexionar y
+                            entender el mundo desde la mente.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item3">Fascinado por las matemáticas aplicadas y los patrones que rigen
+                            el mundo.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-atom" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item4">Amante de la física, con especial interés en la mecánica
+                            cuántica y sus implicaciones en la naturaleza del universo.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item5">Apasionado por la computación cuántica y su potencial disruptivo
+                            en el mundo real.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item6">Escribo por impulso creativo: desde poesía hasta historias e
+                            ideas conceptuales. La escritura es mi espacio para filosofar sin restricciones.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item7">Me gusta combinar lo técnico con lo emocional; construir
+                            sistemas con sentido en mi filosofía personal me inspira.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-flask" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item8">Creo en el poder del conocimiento multidisciplinario: una mente
+                            que conecta ciencia, arte y lógica puede crear cosas únicas.</span>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-masks-theater" aria-hidden="true"></i></span>
+                        <span data-i18n="outside.item9">No busco parecerme a nadie. Busco crear lo que aún no
+                            existe.</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section id="contacto" class="contacto">
             <div class="container">
-                <h2><span class="badge"><i class="fa-solid fa-envelope"></i></span>Contacto</h2>
-                <p>¿Te interesa colaborar, conversar o simplemente ver lo que hago? Aquí te dejo mis enlaces:</p>
+                <h2>
+                    <span class="badge"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                    <span data-i18n="contact.title">Contacto</span>
+                </h2>
+                <p data-i18n="contact.lead">¿Te interesa colaborar, conversar o simplemente ver lo que hago? Aquí te
+                    dejo mis enlaces:</p>
                 <ul>
-                    <li><span class="badge"><i class="fa-brands fa-github"></i></span> <a
-                            href="https://github.com/germann-ux" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                        <a href="https://github.com/germann-ux" target="_blank" rel="noopener noreferrer"
+                            data-i18n="contact.github">GitHub</a>
                     </li>
-                    <li><span class="badge"><i class="fa-brands fa-linkedin"></i></span> <a
-                            href="https://www.linkedin.com/in/germán-evangelista-martinez-354167359" target="_blank"
-                            rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><span class="badge"><i class="fa-brands fa-instagram"></i></span> <a
-                            href="https://www.instagram.com/germansheeesh/" target="_blank"
-                            rel="noopener noreferrer">Instagram</a></li>
-                    <li><span class="badge"><i class="fa-solid fa-envelope-open-text"></i></span> <a
-                            href="mailto:germanev123@gmail.com">Correo: germanev123@gmail.com</a></li>
-                    <li><span class="badge"><i class="fa-solid fa-certificate"></i></span> <a
-                            href="https://www.credly.com/users/german-uriel-evangelista-martinez" target="_blank"
-                            rel="noopener noreferrer">Certificados en Credly</a></li>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></span>
+                        <a href="https://www.linkedin.com/in/germán-evangelista-martinez-354167359" target="_blank"
+                            rel="noopener noreferrer" data-i18n="contact.linkedin">LinkedIn</a>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                        <a href="https://www.instagram.com/germansheeesh/" target="_blank" rel="noopener noreferrer"
+                            data-i18n="contact.instagram">Instagram</a>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i></span>
+                        <a href="mailto:germanev123@gmail.com" data-i18n="contact.emailLink">germanev123@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="badge"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span>
+                        <a href="https://www.credly.com/users/german-uriel-evangelista-martinez" target="_blank"
+                            rel="noopener noreferrer" data-i18n="contact.credly">Certificados en Credly</a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -226,6 +342,8 @@
 
     <script type="module" src="./Assets/Js/Index.js"></script>
     <script type="module" src="./Assets/Js/Projects.js"></script>
+    <script type="module" src="./Assets/Js/lang.js"></script>
+    <script type="module" src="./Assets/Js/langSwich.js"></script>
 </body>
 
 </html>

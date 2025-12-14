@@ -149,7 +149,7 @@ function initCarousel() {
 
         card.addEventListener('click', () => {
             if (card.classList.contains('active')) {
-                window.open(project.url, '_blank');
+                window.open(project.url, '_self');
             } else {
                 goToSlide(index);
             }
@@ -157,7 +157,7 @@ function initCarousel() {
 
         card.querySelector('button').addEventListener('click', (e) => {
             e.stopPropagation();
-            window.open(project.url, '_blank');
+            window.open(project.url, '_self');
         });
 
         handElement.appendChild(card);
