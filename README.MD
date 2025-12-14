@@ -55,7 +55,7 @@ MICV/
 
 ## 📸 Vista previa
 
-> Puedes ver el sitio en funcionamiento [aquí](https://usuario.github.io/repo)
+> Puedes ver el sitio en funcionamiento [aquí](https://germann-ux.github.io/MiCV)
 
 ---
 
