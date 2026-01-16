@@ -21,10 +21,10 @@
 
         <!-- Switch de idioma -->
         <div class="lang-switch" role="group" aria-label="Idioma / Language">
-            <button class="btn btn-secondary" data-lang="es" aria-pressed="true">
+            <button onclick="location.reload()" class="btn btn-secondary" data-lang="es" aria-pressed="true">
                 <i class="fa-solid fa-globe" aria-hidden="true"></i><span>ES</span>
             </button>
-            <button class="btn btn-secondary" data-lang="en" aria-pressed="false">
+            <button onclick="location.reload()" class="btn btn-secondary" data-lang="en" aria-pressed="false">
                 <i class="fa-solid fa-globe" aria-hidden="true"></i><span>EN</span>
             </button>
         </div>
@@ -42,12 +42,6 @@
                         <h2 data-i18n="cabae.title">CABAE: Cifrado Cuántico Adaptativo</h2>
                     </div>
                     <div class="project-actions">
-                        <!-- Si habilitas repo, márcalo con data-i18n como abajo -->
-                        <!--
-            <a href="https://github.com/spogoo/CABAE" target="_blank" class="btn btn-primary" data-i18n="cabae.cta.repo">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> Repositorio
-            </a>
-            -->
                         <button id="hurry-btn" class="btn btn-hurry" data-i18n="hurry.btn.initial">
                             <i class="fa-solid fa-bolt" aria-hidden="true"></i> ¡Apurar a Germán!
                         </button>
@@ -106,7 +100,8 @@
                         <li><span class="tool-icon"><i class="fa-solid fa-atom" aria-hidden="true"></i></span> <span
                                 data-i18n="cabae.tech.item1">Qiskit (IBM) para simulación cuántica</span></li>
                         <li><span class="tool-icon"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></span>
-                            <span data-i18n="cabae.tech.item2">Azure Quantum para pruebas y experimentación</span></li>
+                            <span data-i18n="cabae.tech.item2">Azure Quantum para pruebas y experimentación</span>
+                        </li>
                         <li><span class="tool-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span> <span
                                 data-i18n="cabae.tech.item3">Python como lenguaje principal</span></li>
                         <li><span class="tool-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span> <span
@@ -114,9 +109,11 @@
                                 clásico-cuántico)</span></li>
                         <li><span class="tool-icon"><i class="fa-solid fa-paintbrush" aria-hidden="true"></i></span>
                             <span data-i18n="cabae.tech.item5">HTML/CSS para interfaz visual del proyecto (todavía sin
-                                definir)</span></li>
+                                definir)</span>
+                        </li>
                         <li><span class="tool-icon"><i class="fa-solid fa-file-code" aria-hidden="true"></i></span>
-                            <span data-i18n="cabae.tech.item6">Simulador local en desarrollo</span></li>
+                            <span data-i18n="cabae.tech.item6">Simulador local en desarrollo</span>
+                        </li>
                         <li><span class="tool-icon"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i></span>
                             <span data-i18n="cabae.tech.item7">Jupyter Notebooks para documentación y pruebas</span>
                         </li>
